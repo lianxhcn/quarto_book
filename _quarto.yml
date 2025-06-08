@@ -1,0 +1,72 @@
+project:
+  type: book
+  output-dir: docs  # 输出目录, 生成的 HTML 文件会放在 docs 目录下
+
+book:
+  title: "Quarto Book"
+  reader-mode: true 
+  author: "连玉君"
+  date: today
+  date-format: iso
+#  lang: zh  # 不要设置这个，会导致很多问题
+  
+  sidebar: 
+    #title: "<a href='/index.html'>DS</a>"  # !important, 否则主页链返回链接会出错
+    logo: images/ds-book-logo-40.png
+    logo-href: https://book.lianxh.cn/ds/index.html
+    style: floating  #docked
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/lianxhcn/quarto_book
+
+  favicon: images/ds-book-logo-40.png   # URL logo
+  site-url: https://book.lianxh.cn/ds/index.html # 主页地址, 否则点击右上角链接会乱码
+  editor: source    # 始终采用源代码模式编辑
+
+#----------------------- Chapters ---------------
+  chapters:
+
+    - index.qmd
+    - body/_home.qmd
+    - body/00_intro.ipynb
+    - part: "**Quarto 简介**"
+      chapters: 
+        - body/00_py_with_AI_intro.ipynb
+        - body/00_py_with_AI_pic.ipynb
+        - body/01_1_install-Python-Anocanda.ipynb
+
+    - part: "**创建 Quarto-book**"
+      chapters: 
+        - body/data_02_data_type.ipynb
+        - body/render.ipynb
+      
+    - part: "**参考资料**"
+      chapters: 
+        - body/refs.ipynb
+
+
+
+format:
+  html:
+    toc: true            # 启用目录
+    toc-depth: 3         # 三级以上 sections 才伸缩
+    theme: cosmo         # 可选：cosmo, flatly, litera, litera, yeti 等  主题模版
+    linestretch: 1.6          # 行间距   1.7   
+    fontsize: 11.5pt          # 字号
+    number-sections: true     # 自动章节编号
+    link-external-newwindow: true
+    highlight: true            # 代码高亮
+    highlight-style: atom-one  # 语法高亮, atom-one, breezy, github, tango, solarized-light
+    code-fold: false           # （可选）代码默认不折叠
+    code-line-numbers: false   # （可选）关闭行号
+    code-overflow: wrap        # 控制长代码的换行   
+    css: styles.css
+    callout-appearance: default        # 启用 callout 默认渲染样式
+    md-extensions:
+      - callout                        # 确保 markdown 支持 callout 块语法
+editor: visual
+
+# _quarto_yml refs
+# https://github.com/hadley/r4ds/blob/main/_quarto.yml
+# https://github.com/appliedepi/epiRhandbook_eng/
