@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Quarto book – Quarto Book</title>
+<title>2&nbsp; 创建流程 – Quarto Book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../body/01_intro.html"><strong>Quarto 简介</strong></a></li><li class="breadcrumb-item"><a href="../body/01_intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quarto book</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../body/01_intro.html"><strong>Quarto 简介</strong></a></li><li class="breadcrumb-item"><a href="../body/01_intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">创建流程</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -171,13 +171,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../body/01_intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quarto book</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">创建流程</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../body/02_install_setting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">环境准备</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">环境配置</span></span></a>
   </div>
 </li>
       </ul>
@@ -255,23 +255,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#创建-quarto-book-的方式" id="toc-创建-quarto-book-的方式" class="nav-link active" data-scroll-target="#创建-quarto-book-的方式"><span class="header-section-number">2.1</span> 创建 Quarto Book 的方式</a>
-  <ul class="collapse">
-  <li><a href="#方式-1使用模板" id="toc-方式-1使用模板" class="nav-link" data-scroll-target="#方式-1使用模板"><span class="header-section-number">2.1.1</span> 方式 1：使用模板</a></li>
-  <li><a href="#方式-2从头开始创建" id="toc-方式-2从头开始创建" class="nav-link" data-scroll-target="#方式-2从头开始创建"><span class="header-section-number">2.1.2</span> 方式 2：从头开始创建</a></li>
-  </ul></li>
-  <li><a href="#quarto-book-项目结构" id="toc-quarto-book-项目结构" class="nav-link" data-scroll-target="#quarto-book-项目结构"><span class="header-section-number">2.2</span> Quarto Book 项目结构</a></li>
-  <li><a href="#book" id="toc-book" class="nav-link" data-scroll-target="#book"><span class="header-section-number">2.3</span> book</a></li>
-  <li><a href="#通过-github-发布" id="toc-通过-github-发布" class="nav-link" data-scroll-target="#通过-github-发布"><span class="header-section-number">2.4</span> 通过 github 发布</a></li>
+  <li><a href="#使用模板创建书稿-推荐" id="toc-使用模板创建书稿-推荐" class="nav-link active" data-scroll-target="#使用模板创建书稿-推荐"><span class="header-section-number">2.1</span> 使用模板创建书稿 (推荐)</a></li>
+  <li><a href="#从头开始创建书稿" id="toc-从头开始创建书稿" class="nav-link" data-scroll-target="#从头开始创建书稿"><span class="header-section-number">2.2</span> 从头开始创建书稿</a></li>
+  <li><a href="#quarto-book-项目结构" id="toc-quarto-book-项目结构" class="nav-link" data-scroll-target="#quarto-book-项目结构"><span class="header-section-number">2.3</span> Quarto Book 项目结构</a></li>
+  <li><a href="#参考资料" id="toc-参考资料" class="nav-link" data-scroll-target="#参考资料"><span class="header-section-number">2.4</span> 参考资料</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../body/01_intro.html"><strong>Quarto 简介</strong></a></li><li class="breadcrumb-item"><a href="../body/01_intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quarto book</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../body/01_intro.html"><strong>Quarto 简介</strong></a></li><li class="breadcrumb-item"><a href="../body/01_intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">创建流程</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quarto book</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">创建流程</span></h1>
 </div>
 
 
@@ -288,62 +284,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>quarto book 是一个基于 <a href="https://quarto.org/docs/books/">quarto</a> 的书籍项目：你可以将多个章节文档通过一个名为 <code>_quarto.yml</code> 的文件组织成一本书，然后将其编译为一本电子书 (HTML 或 PDF 格式均可)，进而通过 GitHub Pages 发布。</p>
+<p>Quarto book 是一个基于 <a href="https://quarto.org/docs/books/">quarto</a> 的书籍项目：你可以将多个章节文档通过一个名为 <code>__quarto.yml</code> 的文件组织成一本书，然后将其编译为一本电子书 (HTML 或 PDF 格式均可)，进而通过 GitHub Pages 发布。</p>
 <p>以本项目为例：</p>
 <ul>
 <li>本地文件夹：<code>D:\Github_lianxh\quarto_book</code></li>
 <li>Github 仓库：<a href="https://github.com/lianxhcn/quarto_book" class="uri">https://github.com/lianxhcn/quarto_book</a></li>
 <li>最终发布的主页：<a href="https://lianxhcn.github.io/quarto_book/" class="uri">https://lianxhcn.github.io/quarto_book/</a></li>
 </ul>
-<p>创建一本 Quarto Book 非常简单。你可以使用 VScode 或 RStudio 来创建和编辑你的书籍项目。以下是一些基本的步骤和资源，帮助你快速上手。</p>
-<section id="创建-quarto-book-的方式" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="创建-quarto-book-的方式"><span class="header-section-number">2.1</span> 创建 Quarto Book 的方式</h2>
+<p>创建一本 Quarto Book 非常简单。你可以使用 VScode 或 RStudio 来创建和编辑你的书籍项目。这里以 VScode 为例进行说明。</p>
 <p>你可以通过两种方式来创建 Quarto Book：</p>
 <ol type="1">
 <li>使用现有的模板项目；</li>
 <li>从头开始创建一个新的 Quarto Book 项目。</li>
 </ol>
-<section id="方式-1使用模板" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="方式-1使用模板"><span class="header-section-number">2.1.1</span> 方式 1：使用模板</h3>
+<p>对于初学者而言，建议采用第一种方式。你只需要将现有的模板项目克隆或下载到本地，然后简单修改相关配置和内容即可。</p>
+<section id="使用模板创建书稿-推荐" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="使用模板创建书稿-推荐"><span class="header-section-number">2.1</span> 使用模板创建书稿 (推荐)</h2>
+<ol type="1">
+<li><p><strong>Clone 模板</strong>：</p>
 <ul>
-<li>将 <a href="https://gitee.com/arlionn/quarto_book_template">quarto_book_template</a> 仓库克隆或下载到本地。</li>
-<li>在 VScode 中打开该项目根目录下的 <code>quarto.yml</code> 文件，修改书籍的标题、作者等信息。</li>
-<li>打开 <code>index.qmd</code> 文件，编辑书籍的内容。</li>
-<li>在 VScode 中按 <code>Ctrl+Shift+P</code>，输入 <code>Quarto: Render Book</code> 来编译书籍。
-<ul>
-<li>命令行方式：按快捷键 <code>Ctrl+~</code> 打开 Terminal &gt;&gt; 输入 <code>quarto render</code> 即可</li>
+<li>将 <a href="https://www.github.com/lianxhcn/quarto_book">quarto_book</a> 仓库克隆或下载到本地。</li>
 </ul></li>
-<li>预览书籍：
+<li><p><strong>编译书籍</strong>：</p>
 <ul>
-<li>方式 1：点击右上角的 <strong>Preview</strong> 按钮；</li>
-<li>方式 2：按快捷键 <code>Ctrl+~</code> 打开 Terminal &gt;&gt; 输入 <code>quarto preview</code>；</li>
-<li>方式 3：(推荐) 在输出目录中双击 <code>index.html</code> 文件（需要清理浏览器缓存以查看最新内容）。</li>
+<li>在 VScode 中打开项目根目录，进而打开 <code>__quarto.yml</code> 文件。</li>
+<li>按快捷键 <code>Ctrl+~</code> 打开 Terminal &gt;&gt; 输入 <code>quarto render</code> 即可开始编译。完成后项目根目录下会自动生成 <code>/docs</code> 子文件夹，其中包含编译后的 HTML 文件。</li>
+<li>通过我的电脑地址栏打开 <code>/docs</code> 文件夹，双击 <code>index.html</code> 文件即可在浏览器中预览书籍。 以上步骤若能成功完成，说明你的 Quarto 环境配置正常。</li>
 </ul></li>
-</ul>
+<li><p><strong>修改书籍基本信息</strong>：</p>
+<ul>
+<li>在 VScode 中打开项目根目录下的 <code>_quarto.yml</code> 文件，修改书籍的标题、作者等信息。</li>
+<li>打开 <code>index.qmd</code> 文件，编辑书籍简介。</li>
+</ul></li>
+<li><p><strong>撰写你的书稿</strong>：</p>
+<ul>
+<li>各章书稿存放于 <code>body/</code> 目录下。你可以在该目录下创建新的 <code>.md</code>, <code>.qmd</code> 或 <code>.ipynb</code> 文件，或编辑现有的章节文件。</li>
+<li>完成后，请参照第 3 步，更新 <code>_quarto.yml</code> 文件中的章节列表。</li>
+</ul></li>
+<li><p><strong>编译和预览书籍</strong>：</p>
+<ul>
+<li>在 VScode 中按 <code>Ctrl+~</code> 打开 Terminal &gt;&gt; 输入 <code>quarto render</code> 即可重新编译书籍。</li>
+<li>预览方式同上，双击 <code>/docs/index.html</code> 文件即可在浏览器中查看最新编译结果。
+<ul>
+<li>Note: 如果浏览器无法显示最新内容，请尝试清理浏览器缓存或使用无痕模式打开。</li>
+</ul></li>
+</ul></li>
+</ol>
 </section>
-<section id="方式-2从头开始创建" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="方式-2从头开始创建"><span class="header-section-number">2.1.2</span> 方式 2：从头开始创建</h3>
+<section id="从头开始创建书稿" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="从头开始创建书稿"><span class="header-section-number">2.2</span> 从头开始创建书稿</h2>
+<p>虽然不建议初学者从头开始创建 Quarto Book 项目，但如果你希望完全自定义书籍结构和内容，可以按照以下步骤操作：</p>
 <ul>
 <li>在 VScode 中按 <code>Ctrl+Shift+P</code>，输入 <code>Quarto: Create Project</code> 来创建一个新的 Quarto Book 项目。</li>
 <li>在弹出的对话框中选择 <strong>Book</strong> 模板。</li>
 <li>输入项目名称和保存路径。</li>
-<li>打开生成的 <code>quarto.yml</code> 文件，修改书籍的标题、作者等信息。</li>
+<li>打开生成的 <code>_quarto.yml</code> 文件，修改书籍的标题、作者等信息。</li>
 <li>编辑 <code>index.qmd</code> 文件，添加书籍的内容。</li>
-<li>编译和预览方式与「方式 1」相同。</li>
+<li>编译和预览方式与「使用模板创建书稿」相同。</li>
 </ul>
 </section>
-</section>
-<section id="quarto-book-项目结构" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="quarto-book-项目结构"><span class="header-section-number">2.2</span> Quarto Book 项目结构</h2>
+<section id="quarto-book-项目结构" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="quarto-book-项目结构"><span class="header-section-number">2.3</span> Quarto Book 项目结构</h2>
 <p>Quarto book 本质上是将多个文档组织在一起，使它们能够作为一本书来编译和预览：</p>
 <ul>
 <li>支持多种文档格式，且可以同时使用多种格式的文档。包括：<code>.qmd</code>，<code>.md</code>，<code>.Rmd</code> 和 <code>.ipynb</code> 等。</li>
-<li>配置文件：Quarto Book 项目会通过 <code>_quarto.yml</code> 文件来定义书籍的元数据和结构。</li>
+<li>配置文件：Quarto Book 项目会通过 <code>__quarto.yml</code> 文件来定义书籍的元数据和结构。</li>
 <li><code>index.qmd</code> 文件：这是书籍的入口文件，通常包含书籍的封面和介绍等内容。编译时会将其作为书籍或网站的首页。</li>
 </ul>
 <p>一个典型的 Quarto Book 项目结构如下：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>quarto_book_template/</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>├── _quarto.yml          # 配置文件，定义书籍的元数据和结构</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>quarto_book/</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>├── __quarto.yml          # 配置文件，定义书籍的元数据和结构</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>├── index.qmd           # 书籍的入口文件</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>├── chapter1.qmd        # 第一章内容</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>├── chapter2.qmd        # 第二章内容</span>
@@ -352,43 +362,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>├── data/               # 存放书籍中使用的数据文件</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>└── references.bib      # 参考文献文件（可选）</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>如果章节较多，或希望每个章节有独立的目录，可以将章节文件放在 <code>chapters/</code> 目录下，结构如下：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>quarto_book_template/</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>├── _quarto.yml          # 配置文件，定义书籍的元数据和结构</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>quarto_book/</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>├── __quarto.yml         # 配置文件，定义书籍的元数据和结构</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>├── index.qmd           # 书籍的入口文件</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>├── chapters/           # 存放章节文件</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>│   ├── chapter1.qmd     # 第一章内容   </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>│   ├── chapter2.qmd     # 第二章内容</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>│   ├── chapter3.qmd     # 第三章内容</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>│   ├── chapter1.qmd    # 第一章内容   </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>│   ├── chapter2.qmd    # 第二章内容</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>│   ├── chapter3.qmd    # 第三章内容</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>├── images/             # 存放书籍中使用的图片</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>├── data/               # 存放书籍中使用的数据文件</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>└── references.bib      # 参考文献文件（可选）</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>同理，你也可以为每个章节创建一个独立的目录，例如 <code>chapter1/</code>，<code>chapter2/</code> 等，进而在 <code>chapter1/</code> 目录下创建 <code>data/</code>, <code>images/</code> 等子目录来组织相关资源。这样可以使项目结构更加清晰。</p>
 </section>
-<section id="book" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="book"><span class="header-section-number">2.3</span> book</h2>
+<section id="参考资料" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="参考资料"><span class="header-section-number">2.4</span> 参考资料</h2>
 <ul>
-<li><p>quarto book: <a href="https://quarto.org/docs/books/">官方指南</a></p>
-<ul>
-<li>在 VScode 中：
-<ul>
-<li><strong>Ctrl+P</strong> → <code>&gt;quarto creat project</code></li>
-<li>改写相应的页面</li>
-<li>编译：<code>Ctrl+~</code> 打开 Terminal &gt;&gt; 输入 <code>quarto render</code> 即可</li>
-<li>预览：
-<ul>
-<li>方法 1：到输出 book 的文件夹中，双击 index.html 即可在本地浏览全书 (需要及时清理浏览器缓存才能看到更新后的网页)</li>
-<li>方法 2：点击右上角 <strong>Preview</strong> (<code>Ctrl+Shift+K</code>)</li>
-</ul></li>
-</ul></li>
-<li>RStudio 中我还没有尝试，应该更简单</li>
-</ul></li>
-</ul>
-</section>
-<section id="通过-github-发布" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="通过-github-发布"><span class="header-section-number">2.4</span> 通过 github 发布</h2>
-<ul>
-<li><a href="https://www.aidoczh.com/quarto/docs/publishing/index.html">Quarto 发布基础</a></li>
-<li><a href="https://www.aidoczh.com/quarto/docs/publishing/github-pages.html">github pages</a></li>
+<li><p>quarto book: <a href="https://quarto.org/docs/books/">官方指南</a></p></li>
+<li><p><a href="https://www.aidoczh.com/quarto/docs/publishing/index.html">Quarto 发布基础</a></p></li>
+<li><p><a href="https://www.aidoczh.com/quarto/docs/publishing/github-pages.html">github pages</a></p></li>
 </ul>
 
 
@@ -824,8 +815,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../body/02_install_setting.html" class="pagination-link" aria-label="环境准备">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">环境准备</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../body/02_install_setting.html" class="pagination-link" aria-label="环境配置">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">环境配置</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,4 +1,4 @@
-# 环境准备
+# 环境配置
 
 在 VScode 环境下高效编写和发布 Quarto Book，需要提前完成相关软件的安装与基本配置。以下流程适用于大部分 Windows、macOS 和 Linux 用户。
 

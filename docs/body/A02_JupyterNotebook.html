@@ -199,13 +199,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../body/01_intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quarto book</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">创建流程</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../body/02_install_setting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">环境准备</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">环境配置</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,10 +283,8 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#python-代码" id="toc-python-代码" class="nav-link active" data-scroll-target="#python-代码"><span class="header-section-number">9</span> Python 代码</a>
-  <ul class="collapse">
-  <li><a href="#stata-代码" id="toc-stata-代码" class="nav-link" data-scroll-target="#stata-代码"><span class="header-section-number">9.1</span> Stata 代码</a></li>
-  </ul></li>
+  <li><a href="#python-代码" id="toc-python-代码" class="nav-link active" data-scroll-target="#python-代码"><span class="header-section-number">8.1</span> Python 代码</a></li>
+  <li><a href="#stata-代码" id="toc-stata-代码" class="nav-link" data-scroll-target="#stata-代码"><span class="header-section-number">8.2</span> Stata 代码</a></li>
   </ul>
 </nav>
     </div>
@@ -315,10 +313,10 @@ window.Quarto = {
 <p>Quarto book 也支持 <code>.ipynb</code> 文件。你可以在 Quarto book 中直接使用 Jupyter Notebook 文件。</p>
 <p>Jupyter Notebook 文档中的代码块可以直接运行，输出的图片会被自动存储在 <code>./_static</code> 目录下。当你通过 github pages 发布时，这些图片会被自动上传到 GitHub。</p>
 <p>一个 Jupyter Notebook 文档中可以支持多种编程语言。</p>
-<section id="python-代码" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Python 代码</h1>
+<section id="python-代码" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="python-代码"><span class="header-section-number">8.1</span> Python 代码</h2>
 <p>绘制函数图 <span class="math inline">\(y = x^2\)</span> 的代码如下：</p>
-<div id="61687b70" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
+<div id="61687b70" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a># 绘制一幅简单的函数图</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>import numpy <span class="kw">as</span> np</span>
@@ -342,8 +340,9 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<section id="stata-代码" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="stata-代码"><span class="header-section-number">9.1</span> Stata 代码</h2>
+</section>
+<section id="stata-代码" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="stata-代码"><span class="header-section-number">8.2</span> Stata 代码</h2>
 <p>使用 Stata 自带的 <code>sysuse auto</code> 数据集，绘制汽车价格与重量的散点图：</p>
 <div id="2f6991b9" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">sysuse</span> <span class="st">"auto.dta"</span>, <span class="kw">clear</span></span>
@@ -361,7 +360,6 @@ window.Quarto = {
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
