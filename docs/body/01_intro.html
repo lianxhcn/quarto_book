@@ -284,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Quarto book 是一个基于 <a href="https://quarto.org/docs/books/">quarto</a> 的书籍项目：你可以将多个章节文档通过一个名为 <code>__quarto.yml</code> 的文件组织成一本书，然后将其编译为一本电子书 (HTML 或 PDF 格式均可)，进而通过 GitHub Pages 发布。</p>
+<p>Quarto book 是一个基于 <a href="https://quarto.org/docs/books/">quarto</a> 的书籍项目：你可以将多个章节文档通过一个名为 <code>_quarto.yml</code> 的文件组织成一本书，然后将其编译为一本电子书 (HTML 或 PDF 格式均可)，进而通过 GitHub Pages 发布。</p>
 <p>以本项目为例：</p>
 <ul>
 <li>本地文件夹：<code>D:\Github_lianxh\quarto_book</code></li>
@@ -300,6 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>对于初学者而言，建议采用第一种方式。你只需要将现有的模板项目克隆或下载到本地，然后简单修改相关配置和内容即可。</p>
 <section id="使用模板创建书稿-推荐" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="使用模板创建书稿-推荐"><span class="header-section-number">2.1</span> 使用模板创建书稿 (推荐)</h2>
+<p>在执行如下步骤之前，请先确保你已经完成了 <a href="../body/02_install_setting.html">环境配置</a> 的相关工作。</p>
 <ol type="1">
 <li><p><strong>Clone 模板</strong>：</p>
 <ul>
@@ -307,7 +308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li><p><strong>编译书籍</strong>：</p>
 <ul>
-<li>在 VScode 中打开项目根目录，进而打开 <code>__quarto.yml</code> 文件。</li>
+<li>在 VScode 中打开项目根目录，进而打开 <code>_quarto.yml</code> 文件。</li>
 <li>按快捷键 <code>Ctrl+~</code> 打开 Terminal &gt;&gt; 输入 <code>quarto render</code> 即可开始编译。完成后项目根目录下会自动生成 <code>/docs</code> 子文件夹，其中包含编译后的 HTML 文件。</li>
 <li>通过我的电脑地址栏打开 <code>/docs</code> 文件夹，双击 <code>index.html</code> 文件即可在浏览器中预览书籍。 以上步骤若能成功完成，说明你的 Quarto 环境配置正常。</li>
 </ul></li>
@@ -348,12 +349,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Quarto book 本质上是将多个文档组织在一起，使它们能够作为一本书来编译和预览：</p>
 <ul>
 <li>支持多种文档格式，且可以同时使用多种格式的文档。包括：<code>.qmd</code>，<code>.md</code>，<code>.Rmd</code> 和 <code>.ipynb</code> 等。</li>
-<li>配置文件：Quarto Book 项目会通过 <code>__quarto.yml</code> 文件来定义书籍的元数据和结构。</li>
+<li>配置文件：Quarto Book 项目会通过 <code>_quarto.yml</code> 文件来定义书籍的元数据和结构。</li>
 <li><code>index.qmd</code> 文件：这是书籍的入口文件，通常包含书籍的封面和介绍等内容。编译时会将其作为书籍或网站的首页。</li>
 </ul>
 <p>一个典型的 Quarto Book 项目结构如下：</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>quarto_book/</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>├── __quarto.yml          # 配置文件，定义书籍的元数据和结构</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>├── _quarto.yml          # 配置文件，定义书籍的元数据和结构</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>├── index.qmd           # 书籍的入口文件</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>├── chapter1.qmd        # 第一章内容</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>├── chapter2.qmd        # 第二章内容</span>
@@ -363,7 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>└── references.bib      # 参考文献文件（可选）</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>如果章节较多，或希望每个章节有独立的目录，可以将章节文件放在 <code>chapters/</code> 目录下，结构如下：</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>quarto_book/</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>├── __quarto.yml         # 配置文件，定义书籍的元数据和结构</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>├── _quarto.yml         # 配置文件，定义书籍的元数据和结构</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>├── index.qmd           # 书籍的入口文件</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>├── chapters/           # 存放章节文件</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>│   ├── chapter1.qmd    # 第一章内容   </span>

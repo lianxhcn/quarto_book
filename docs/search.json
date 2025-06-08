@@ -14,7 +14,7 @@
     "href": "body/01_intro.html",
     "title": "2  创建流程",
     "section": "",
-    "text": "2.1 使用模板创建书稿 (推荐)\nQuarto book 是一个基于 quarto 的书籍项目：你可以将多个章节文档通过一个名为 __quarto.yml 的文件组织成一本书，然后将其编译为一本电子书 (HTML 或 PDF 格式均可)，进而通过 GitHub Pages 发布。\n以本项目为例：\n创建一本 Quarto Book 非常简单。你可以使用 VScode 或 RStudio 来创建和编辑你的书籍项目。这里以 VScode 为例进行说明。\n你可以通过两种方式来创建 Quarto Book：\n对于初学者而言，建议采用第一种方式。你只需要将现有的模板项目克隆或下载到本地，然后简单修改相关配置和内容即可。",
+    "text": "2.1 使用模板创建书稿 (推荐)\nQuarto book 是一个基于 quarto 的书籍项目：你可以将多个章节文档通过一个名为 _quarto.yml 的文件组织成一本书，然后将其编译为一本电子书 (HTML 或 PDF 格式均可)，进而通过 GitHub Pages 发布。\n以本项目为例：\n创建一本 Quarto Book 非常简单。你可以使用 VScode 或 RStudio 来创建和编辑你的书籍项目。这里以 VScode 为例进行说明。\n你可以通过两种方式来创建 Quarto Book：\n对于初学者而言，建议采用第一种方式。你只需要将现有的模板项目克隆或下载到本地，然后简单修改相关配置和内容即可。\n在执行如下步骤之前，请先确保你已经完成了 环境配置 的相关工作。",
     "crumbs": [
       "**Quarto 简介**",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>创建流程</span>"
@@ -25,7 +25,7 @@
     "href": "body/01_intro.html#使用模板创建书稿-推荐",
     "title": "2  创建流程",
     "section": "",
-    "text": "Clone 模板：\n\n将 quarto_book 仓库克隆或下载到本地。\n\n编译书籍：\n\n在 VScode 中打开项目根目录，进而打开 __quarto.yml 文件。\n按快捷键 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可开始编译。完成后项目根目录下会自动生成 /docs 子文件夹，其中包含编译后的 HTML 文件。\n通过我的电脑地址栏打开 /docs 文件夹，双击 index.html 文件即可在浏览器中预览书籍。 以上步骤若能成功完成，说明你的 Quarto 环境配置正常。\n\n修改书籍基本信息：\n\n在 VScode 中打开项目根目录下的 _quarto.yml 文件，修改书籍的标题、作者等信息。\n打开 index.qmd 文件，编辑书籍简介。\n\n撰写你的书稿：\n\n各章书稿存放于 body/ 目录下。你可以在该目录下创建新的 .md, .qmd 或 .ipynb 文件，或编辑现有的章节文件。\n完成后，请参照第 3 步，更新 _quarto.yml 文件中的章节列表。\n\n编译和预览书籍：\n\n在 VScode 中按 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可重新编译书籍。\n预览方式同上，双击 /docs/index.html 文件即可在浏览器中查看最新编译结果。\n\nNote: 如果浏览器无法显示最新内容，请尝试清理浏览器缓存或使用无痕模式打开。",
+    "text": "Clone 模板：\n\n将 quarto_book 仓库克隆或下载到本地。\n\n编译书籍：\n\n在 VScode 中打开项目根目录，进而打开 _quarto.yml 文件。\n按快捷键 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可开始编译。完成后项目根目录下会自动生成 /docs 子文件夹，其中包含编译后的 HTML 文件。\n通过我的电脑地址栏打开 /docs 文件夹，双击 index.html 文件即可在浏览器中预览书籍。 以上步骤若能成功完成，说明你的 Quarto 环境配置正常。\n\n修改书籍基本信息：\n\n在 VScode 中打开项目根目录下的 _quarto.yml 文件，修改书籍的标题、作者等信息。\n打开 index.qmd 文件，编辑书籍简介。\n\n撰写你的书稿：\n\n各章书稿存放于 body/ 目录下。你可以在该目录下创建新的 .md, .qmd 或 .ipynb 文件，或编辑现有的章节文件。\n完成后，请参照第 3 步，更新 _quarto.yml 文件中的章节列表。\n\n编译和预览书籍：\n\n在 VScode 中按 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可重新编译书籍。\n预览方式同上，双击 /docs/index.html 文件即可在浏览器中查看最新编译结果。\n\nNote: 如果浏览器无法显示最新内容，请尝试清理浏览器缓存或使用无痕模式打开。",
     "crumbs": [
       "**Quarto 简介**",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>创建流程</span>"
@@ -47,7 +47,7 @@
     "href": "body/01_intro.html#quarto-book-项目结构",
     "title": "2  创建流程",
     "section": "2.3 Quarto Book 项目结构",
-    "text": "2.3 Quarto Book 项目结构\nQuarto book 本质上是将多个文档组织在一起，使它们能够作为一本书来编译和预览：\n\n支持多种文档格式，且可以同时使用多种格式的文档。包括：.qmd，.md，.Rmd 和 .ipynb 等。\n配置文件：Quarto Book 项目会通过 __quarto.yml 文件来定义书籍的元数据和结构。\nindex.qmd 文件：这是书籍的入口文件，通常包含书籍的封面和介绍等内容。编译时会将其作为书籍或网站的首页。\n\n一个典型的 Quarto Book 项目结构如下：\nquarto_book/\n├── __quarto.yml          # 配置文件，定义书籍的元数据和结构\n├── index.qmd           # 书籍的入口文件\n├── chapter1.qmd        # 第一章内容\n├── chapter2.qmd        # 第二章内容\n├── chapter3.qmd        # 第三章内容\n├── images/             # 存放书籍中使用的图片\n├── data/               # 存放书籍中使用的数据文件\n└── references.bib      # 参考文献文件（可选）\n如果章节较多，或希望每个章节有独立的目录，可以将章节文件放在 chapters/ 目录下，结构如下：\nquarto_book/\n├── __quarto.yml         # 配置文件，定义书籍的元数据和结构\n├── index.qmd           # 书籍的入口文件\n├── chapters/           # 存放章节文件\n│   ├── chapter1.qmd    # 第一章内容   \n│   ├── chapter2.qmd    # 第二章内容\n│   ├── chapter3.qmd    # 第三章内容\n├── images/             # 存放书籍中使用的图片\n├── data/               # 存放书籍中使用的数据文件\n└── references.bib      # 参考文献文件（可选）\n同理，你也可以为每个章节创建一个独立的目录，例如 chapter1/，chapter2/ 等，进而在 chapter1/ 目录下创建 data/, images/ 等子目录来组织相关资源。这样可以使项目结构更加清晰。",
+    "text": "2.3 Quarto Book 项目结构\nQuarto book 本质上是将多个文档组织在一起，使它们能够作为一本书来编译和预览：\n\n支持多种文档格式，且可以同时使用多种格式的文档。包括：.qmd，.md，.Rmd 和 .ipynb 等。\n配置文件：Quarto Book 项目会通过 _quarto.yml 文件来定义书籍的元数据和结构。\nindex.qmd 文件：这是书籍的入口文件，通常包含书籍的封面和介绍等内容。编译时会将其作为书籍或网站的首页。\n\n一个典型的 Quarto Book 项目结构如下：\nquarto_book/\n├── _quarto.yml          # 配置文件，定义书籍的元数据和结构\n├── index.qmd           # 书籍的入口文件\n├── chapter1.qmd        # 第一章内容\n├── chapter2.qmd        # 第二章内容\n├── chapter3.qmd        # 第三章内容\n├── images/             # 存放书籍中使用的图片\n├── data/               # 存放书籍中使用的数据文件\n└── references.bib      # 参考文献文件（可选）\n如果章节较多，或希望每个章节有独立的目录，可以将章节文件放在 chapters/ 目录下，结构如下：\nquarto_book/\n├── _quarto.yml         # 配置文件，定义书籍的元数据和结构\n├── index.qmd           # 书籍的入口文件\n├── chapters/           # 存放章节文件\n│   ├── chapter1.qmd    # 第一章内容   \n│   ├── chapter2.qmd    # 第二章内容\n│   ├── chapter3.qmd    # 第三章内容\n├── images/             # 存放书籍中使用的图片\n├── data/               # 存放书籍中使用的数据文件\n└── references.bib      # 参考文献文件（可选）\n同理，你也可以为每个章节创建一个独立的目录，例如 chapter1/，chapter2/ 等，进而在 chapter1/ 目录下创建 data/, images/ 等子目录来组织相关资源。这样可以使项目结构更加清晰。",
     "crumbs": [
       "**Quarto 简介**",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>创建流程</span>"
