@@ -1,0 +1,331 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto Book",
+    "section": "",
+    "text": "主页 || 课程 || 视频 || 推文 || 资料",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>数据分析</span>"
+    ]
+  },
+  {
+    "objectID": "body/01_intro.html",
+    "href": "body/01_intro.html",
+    "title": "2  Quarto book",
+    "section": "",
+    "text": "2.1 创建 Quarto Book 的方式\nquarto book 是一个基于 quarto 的书籍项目：你可以将多个章节文档通过一个名为 _quarto.yml 的文件组织成一本书，然后将其编译为一本电子书 (HTML 或 PDF 格式均可)，进而通过 GitHub Pages 发布。\n以本项目为例：\n创建一本 Quarto Book 非常简单。你可以使用 VScode 或 RStudio 来创建和编辑你的书籍项目。以下是一些基本的步骤和资源，帮助你快速上手。\n你可以通过两种方式来创建 Quarto Book：",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Quarto book</span>"
+    ]
+  },
+  {
+    "objectID": "body/01_intro.html#创建-quarto-book-的方式",
+    "href": "body/01_intro.html#创建-quarto-book-的方式",
+    "title": "2  Quarto book",
+    "section": "",
+    "text": "使用现有的模板项目；\n从头开始创建一个新的 Quarto Book 项目。\n\n\n2.1.1 方式 1：使用模板\n\n将 quarto_book_template 仓库克隆或下载到本地。\n在 VScode 中打开该项目根目录下的 quarto.yml 文件，修改书籍的标题、作者等信息。\n打开 index.qmd 文件，编辑书籍的内容。\n在 VScode 中按 Ctrl+Shift+P，输入 Quarto: Render Book 来编译书籍。\n\n命令行方式：按快捷键 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可\n\n预览书籍：\n\n方式 1：点击右上角的 Preview 按钮；\n方式 2：按快捷键 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto preview；\n方式 3：(推荐) 在输出目录中双击 index.html 文件（需要清理浏览器缓存以查看最新内容）。\n\n\n\n\n2.1.2 方式 2：从头开始创建\n\n在 VScode 中按 Ctrl+Shift+P，输入 Quarto: Create Project 来创建一个新的 Quarto Book 项目。\n在弹出的对话框中选择 Book 模板。\n输入项目名称和保存路径。\n打开生成的 quarto.yml 文件，修改书籍的标题、作者等信息。\n编辑 index.qmd 文件，添加书籍的内容。\n编译和预览方式与「方式 1」相同。",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Quarto book</span>"
+    ]
+  },
+  {
+    "objectID": "body/01_intro.html#quarto-book-项目结构",
+    "href": "body/01_intro.html#quarto-book-项目结构",
+    "title": "2  Quarto book",
+    "section": "2.2 Quarto Book 项目结构",
+    "text": "2.2 Quarto Book 项目结构\nQuarto book 本质上是将多个文档组织在一起，使它们能够作为一本书来编译和预览：\n\n支持多种文档格式，且可以同时使用多种格式的文档。包括：.qmd，.md，.Rmd 和 .ipynb 等。\n配置文件：Quarto Book 项目会通过 _quarto.yml 文件来定义书籍的元数据和结构。\nindex.qmd 文件：这是书籍的入口文件，通常包含书籍的封面和介绍等内容。编译时会将其作为书籍或网站的首页。\n\n一个典型的 Quarto Book 项目结构如下：\nquarto_book_template/\n├── _quarto.yml          # 配置文件，定义书籍的元数据和结构\n├── index.qmd           # 书籍的入口文件\n├── chapter1.qmd        # 第一章内容\n├── chapter2.qmd        # 第二章内容\n├── chapter3.qmd        # 第三章内容\n├── images/             # 存放书籍中使用的图片\n├── data/               # 存放书籍中使用的数据文件\n└── references.bib      # 参考文献文件（可选）\n如果章节较多，或希望每个章节有独立的目录，可以将章节文件放在 chapters/ 目录下，结构如下：\nquarto_book_template/\n├── _quarto.yml          # 配置文件，定义书籍的元数据和结构\n├── index.qmd           # 书籍的入口文件\n├── chapters/           # 存放章节文件\n│   ├── chapter1.qmd     # 第一章内容   \n│   ├── chapter2.qmd     # 第二章内容\n│   ├── chapter3.qmd     # 第三章内容\n├── images/             # 存放书籍中使用的图片\n├── data/               # 存放书籍中使用的数据文件\n└── references.bib      # 参考文献文件（可选）\n同理，你也可以为每个章节创建一个独立的目录，例如 chapter1/，chapter2/ 等，进而在 chapter1/ 目录下创建 data/, images/ 等子目录来组织相关资源。这样可以使项目结构更加清晰。",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Quarto book</span>"
+    ]
+  },
+  {
+    "objectID": "body/01_intro.html#book",
+    "href": "body/01_intro.html#book",
+    "title": "2  Quarto book",
+    "section": "2.3 book",
+    "text": "2.3 book\n\nquarto book: 官方指南\n\n在 VScode 中：\n\nCtrl+P → &gt;quarto creat project\n改写相应的页面\n编译：Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可\n预览：\n\n方法 1：到输出 book 的文件夹中，双击 index.html 即可在本地浏览全书 (需要及时清理浏览器缓存才能看到更新后的网页)\n方法 2：点击右上角 Preview (Ctrl+Shift+K)\n\n\nRStudio 中我还没有尝试，应该更简单",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Quarto book</span>"
+    ]
+  },
+  {
+    "objectID": "body/01_intro.html#通过-github-发布",
+    "href": "body/01_intro.html#通过-github-发布",
+    "title": "2  Quarto book",
+    "section": "2.4 通过 github 发布",
+    "text": "2.4 通过 github 发布\n\nQuarto 发布基础\ngithub pages",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Quarto book</span>"
+    ]
+  },
+  {
+    "objectID": "body/02_install_setting.html",
+    "href": "body/02_install_setting.html",
+    "title": "3  环境准备",
+    "section": "",
+    "text": "3.1 安装 VScode 编辑器\n在 VScode 环境下高效编写和发布 Quarto Book，需要提前完成相关软件的安装与基本配置。以下流程适用于大部分 Windows、macOS 和 Linux 用户。\n对于 Python 用户，可以参照 6 Python：安装和环境配置 配置 Python 环境。\n访问 Visual Studio Code 官网，下载安装最新版 VScode。建议安装稳定版，无需安装 Insiders 预览版。",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>环境准备</span>"
+    ]
+  },
+  {
+    "objectID": "body/02_install_setting.html#安装-quarto",
+    "href": "body/02_install_setting.html#安装-quarto",
+    "title": "3  环境准备",
+    "section": "3.2 安装 Quarto",
+    "text": "3.2 安装 Quarto\n访问 Quarto 官网，下载并安装适合你操作系统的 Quarto。安装后，建议在命令行（终端/PowerShell）中运行 quarto --version 检查是否安装成功。",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>环境准备</span>"
+    ]
+  },
+  {
+    "objectID": "body/02_install_setting.html#可选安装-r-或-python-环境",
+    "href": "body/02_install_setting.html#可选安装-r-或-python-环境",
+    "title": "3  环境准备",
+    "section": "3.3 （可选）安装 R 或 Python 环境",
+    "text": "3.3 （可选）安装 R 或 Python 环境\n* 如果你的文档包含 R 代码块，需安装 [R](https://cran.r-project.org/)。\n* 如果包含 Python 代码块，需配置好 Python 运行环境。建议安装 Anaconda 套装，访问 [Anaconda 官网](https://www.anaconda.com/products/distribution) 下载并安装。Anaconda 包含了 Python 及常用的数据科学库，安装后可通过 Anaconda Navigator 或命令行使用。",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>环境准备</span>"
+    ]
+  },
+  {
+    "objectID": "body/02_install_setting.html#安装-vscode-插件",
+    "href": "body/02_install_setting.html#安装-vscode-插件",
+    "title": "3  环境准备",
+    "section": "3.4 安装 VScode 插件",
+    "text": "3.4 安装 VScode 插件\n在 VScode 左侧扩展（Extensions）面板搜索并安装下列插件：\n\nQuarto（官方插件，支持 .qmd 文件的语法高亮与预览）\nMarkdown All in One（增强 Markdown 编辑体验）\nJupyter（如需直接在 VScode 内编辑 .ipynb 文件）\nPython、R（分别对应需要用到的语言）",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>环境准备</span>"
+    ]
+  },
+  {
+    "objectID": "body/02_install_setting.html#配置环境变量如有需要",
+    "href": "body/02_install_setting.html#配置环境变量如有需要",
+    "title": "3  环境准备",
+    "section": "3.5 配置环境变量（如有需要）",
+    "text": "3.5 配置环境变量（如有需要）\n确保 quarto、R、python 等命令可在终端/命令行直接调用。对于 Windows 用户，如出现命令无法识别，可在“系统环境变量”中添加相应路径。",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>环境准备</span>"
+    ]
+  },
+  {
+    "objectID": "body/02_install_setting.html#检查依赖是否正常",
+    "href": "body/02_install_setting.html#检查依赖是否正常",
+    "title": "3  环境准备",
+    "section": "3.6 检查依赖是否正常",
+    "text": "3.6 检查依赖是否正常\n在终端分别运行以下命令，确认环境配置成功：\nquarto --version\npython --version      # 若需支持 Python\nR --version           # 若需支持 R\njupyter --version     # 若需支持 .ipynb",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>环境准备</span>"
+    ]
+  },
+  {
+    "objectID": "body/02_install_setting.html#github-相关",
+    "href": "body/02_install_setting.html#github-相关",
+    "title": "3  环境准备",
+    "section": "3.7 Github 相关",
+    "text": "3.7 Github 相关\n\ngithub 账号（推荐） 如果你计划将 Quarto Book 发布到 GitHub 或其他代码托管平台，建议注册一个 GitHub 账号。注册后，你可以创建仓库来存储和管理你的 Quarto Book 项目。\ngithub desktop（推荐） 如果你不熟悉 Git 命令行操作，可以安装 GitHub Desktop，它提供了图形化界面，方便进行版本控制和仓库管理。\n安装 Git（可选） 熟悉 Git 的用户，建议安装 Git 并在 VScode 中完成初步配置。这样可实现版本管理、远程仓库同步、多人协作等功能。\n\n完成上述准备工作后，你就可以在 VScode 环境下流畅地新建、编辑和预览 Quarto Book 项目了。",
+    "crumbs": [
+      "**Quarto 简介**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>环境准备</span>"
+    ]
+  },
+  {
+    "objectID": "body/03_YML_file.html",
+    "href": "body/03_YML_file.html",
+    "title": "4  _quarto.yml 文件",
+    "section": "",
+    "text": "4.1 简介\n_quarto.yml 文件是 Quarto Book 项目的配置文件，用于定义书籍的元数据、结构和输出格式。以下是一个简单的 _quarto.yml 文件示例：\n你还可以在 _quarto.yml 文件中添加更多配置选项，如自定义样式、引用管理、输出格式等。具体的配置选项可以参考 Quarto Book 官方指南。",
+    "crumbs": [
+      "**创建 Quarto-book**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>_quarto.yml 文件</span>"
+    ]
+  },
+  {
+    "objectID": "body/03_YML_file.html#简介",
+    "href": "body/03_YML_file.html#简介",
+    "title": "4  _quarto.yml 文件",
+    "section": "",
+    "text": "project:\n  type: book\n  output-dir: docs  # 输出目录，可以自定义\n\nbook:\n  title: \"你的书名\"\n  author: \"作者姓名\"\n  date: today\n  date-format: iso\n  chapters:\n    - index.qmd\n    - chapters/chapter1.qmd\n    - chapters/chapter2.qmd\n    - chapters/chapter3.qmd\n\n# 输出格式设置，可按需调整\nformat:\n  html:\n    toc: true\n    toc-depth: 3\n    number-sections: true\n    theme: cosmo\n    code-fold: true\n    code-summary: \"显示代码\"\n    df-print: paged\n    highlight-style: github\n  pdf:\n    documentclass: book\n    toc: true\n    toc-depth: 3\n    number-sections: true",
+    "crumbs": [
+      "**创建 Quarto-book**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>_quarto.yml 文件</span>"
+    ]
+  },
+  {
+    "objectID": "body/03_YML_file.html#实例",
+    "href": "body/03_YML_file.html#实例",
+    "title": "4  _quarto.yml 文件",
+    "section": "4.2 实例",
+    "text": "4.2 实例\n你也可以查看如下示例的 _quarto.yml 文件，从中截取你需要的部分：\n\nHadley Wickham, R for Data Science, 2024. Chapter 25: Quarto. Github.\n\n_quarto.yml\n\nNicholas Tierney. Quarto for Scientists . 2024 . book, github\n\n_quarto.yml\n\n连玉君, 2025, 数据分析与 Python 应用.\n\n_quarto.yml",
+    "crumbs": [
+      "**创建 Quarto-book**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>_quarto.yml 文件</span>"
+    ]
+  },
+  {
+    "objectID": "body/03_YML_file.html#更多配置选项",
+    "href": "body/03_YML_file.html#更多配置选项",
+    "title": "4  _quarto.yml 文件",
+    "section": "4.3 更多配置选项",
+    "text": "4.3 更多配置选项\n如果你想对 _quarto.yml 文件进行更深入的了解和配置，可以参考以下资源：\n\nQuarto Book 官方指南\nQuarto Book Options\nQuarto Book Configuration\nQuarto Book YAML Reference\n\n你也可以使用如下提示词，借助 ChatGPT, DeepSeek, 豆包等 AI 工具来学习和配置 _quarto.yml 文件：\n\n\n\n\n\n\n提示词\n\n\n\n\n分享一个完整的 quarto book 中的 _quarto.yml 配置讲义\n解释 _quarto.yml 文件中的每个配置项的作用\n如何在 _quarto.yml 文件中配置书籍网站主页的页脚\n如何设置代码块的语法高亮和折叠功能\n如何在 _quarto.yml 文件中添加自定义样式和主题",
+    "crumbs": [
+      "**创建 Quarto-book**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>_quarto.yml 文件</span>"
+    ]
+  },
+  {
+    "objectID": "body/04_github_page.html",
+    "href": "body/04_github_page.html",
+    "title": "5  网页发布",
+    "section": "",
+    "text": "以下是使用 GitHub Desktop 创建 gh-pages 分支并完成部署的详细步骤（基于你的仓库地址 https://github.com/lianxhcn/quarto_book）：\n\n5.0.1 步骤 1：克隆仓库到本地\n\n打开 GitHub Desktop，点击左上角 File &gt; Clone Repository。\n\n在 URL 栏输入你的仓库地址：\nhttps://github.com/lianxhcn/quarto_book.git\n选择本地保存路径（例如 D:\\Github_lianxh\\quarto_book），点击 Clone。\n\n此时本地会生成一个与远程仓库同步的文件夹，默认分支为 main（或 master，取决于仓库初始设置）。\n\n\n\n\n5.0.2 步骤 2：创建 gh-pages 分支\n\n在 GitHub Desktop 右上角，点击当前分支名称（默认是 main）。\n\n在弹出的分支切换菜单中，点击 New branch。\n\n输入分支名称：gh-pages，点击 Create branch。\n\n此时你已切换到本地的 gh-pages 分支。\n\n\n\n\n5.0.3 步骤 3：准备 Quarto 输出文件\n\n将 Quarto 编译生成的 docs 文件夹内的所有内容（如 index.html、静态资源等）复制到本地仓库的根目录。\n\n注意：确保根目录下的文件是 Quarto 站点的完整内容（即 docs 文件夹内的文件直接放在仓库根目录，而不是保留 docs 文件夹本身）。\n\n例如：若 docs 文件夹内有 index.html，复制后仓库根目录应直接包含 index.html。\n\n\n\n\n5.0.4 步骤 4：提交文件到本地分支\n\n在 GitHub Desktop 左侧的 Changes 选项卡中，会显示新增/修改的文件。\n\n在 Summary 栏输入提交信息（如 “Add Quarto book files for gh-pages”）。\n\n点击 Commit to gh-pages 完成本地提交。\n\n\n\n5.0.5 步骤 5：推送 gh-pages 分支到远程仓库\n\n点击右上角的 Push origin 按钮（通常在分支名称右侧）。\n\n确认推送操作，等待进度条完成。\n\n此时远程仓库（https://github.com/lianxhcn/quarto_book）会新增 gh-pages 分支，并包含你的 Quarto 站点文件。\n\n\n\n\n5.0.6 步骤 6：验证 GitHub Pages 部署\n\n登录 GitHub，进入你的仓库：https://github.com/lianxhcn/quarto_book。\n\n点击顶部菜单的 Settings &gt; Pages（左侧栏）。\n\n在 Source 部分，选择 Branch: gh-pages，并点击 Save。\n\n稍等片刻（通常几分钟内），GitHub 会自动部署页面。\n\n\n部署完成后，页面顶部会显示访问链接：\nhttps://lianxhcn.github.io/quarto_book/\n\n点击链接即可访问你的 Quarto Book。\n\n\n\n\n5.0.7 常见问题与注意事项\n\n文件结构问题：\n\n若保留 docs 文件夹（即仓库根目录下有 docs/index.html），访问路径需改为：\nhttps://lianxhcn.github.io/quarto_book/docs/\n这可能不符合预期，建议直接将内容放在根目录。\n\n分支名称：\n\nGitHub Pages 默认识别 gh-pages 或 main 分支（需在设置中手动选择），确保分支名称正确。\n\n更新内容：\n\n后续修改内容后，只需在本地 gh-pages 分支更新文件，重新提交并推送即可。\n\n强制推送（可选）：\n\n若远程分支已有冲突，可尝试强制推送：\n# 在 Git 终端执行（需先切换到本地 gh-pages 分支）\ngit push origin gh-pages --force\n\n\n通过以上步骤，你可以通过 GitHub Desktop 轻松创建并部署 gh-pages 分支，实现 Quarto Book 的在线访问。",
+    "crumbs": [
+      "**创建 Quarto-book**",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>网页发布</span>"
+    ]
+  },
+  {
+    "objectID": "body/05_references.html",
+    "href": "body/05_references.html",
+    "title": "6  教程和参考资料",
+    "section": "",
+    "text": "6.1 Quarto Book 相关的资源",
+    "crumbs": [
+      "**参考资料**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>教程和参考资料</span>"
+    ]
+  },
+  {
+    "objectID": "body/05_references.html#quarto-book-相关的资源",
+    "href": "body/05_references.html#quarto-book-相关的资源",
+    "title": "6  教程和参考资料",
+    "section": "",
+    "text": "Quarto Book 官方指南 | 中文 | Options\nHow to self-publish a technical book on Leanpub and Amazon using Quarto\n李东风，2023，R 语言教程. 22 Quarto格式文件\nR for Data Science, 2024. Chapter 25: Quarto. Github, _quarto.yml",
+    "crumbs": [
+      "**参考资料**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>教程和参考资料</span>"
+    ]
+  },
+  {
+    "objectID": "body/05_references.html#发布",
+    "href": "body/05_references.html#发布",
+    "title": "6  教程和参考资料",
+    "section": "6.2 发布",
+    "text": "6.2 发布\n\nQuarto: Publishing to GitHub Pages\nHow to Create and Publish a Quarto Book on GitHub\nQuarto 官网：GitHub Pages\n\nNote:\n\n考虑到国内很多读者无法访问 GitHub Pages，可以使用 Gitee 或 Coding 等国内平台进行发布。\n我个人是将编译后的 docs 文件夹上传到 GitHub 的 gh-pages 分支中，这样可以直接通过 https://&lt;username&gt;.github.io/&lt;repository&gt;/ 访问。",
+    "crumbs": [
+      "**参考资料**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>教程和参考资料</span>"
+    ]
+  },
+  {
+    "objectID": "body/05_references.html#用-quarto-book-写的书",
+    "href": "body/05_references.html#用-quarto-book-写的书",
+    "title": "6  教程和参考资料",
+    "section": "6.3 用 Quarto book 写的书",
+    "text": "6.3 用 Quarto book 写的书\n你可以选择自己喜欢的风格，然后将对应的仓库克隆下来，修改 _quarto.yml 文件和 index.qmd 文件，添加自己的内容。\n\n数据分析与 Python 应用\n\n我自己写的第一本 Quarto Book，可以很好地支持中文。\n\nhttps://style.tidyverse.org/\n\n不涉及任何 R 代码的执行问题，可以视为一个 Quarto-book 模板\n\nR for Data Science | Code\nVisualization Curriculum | Code\nOscar Baruffa, 2024, Big Book for R. Read, Github\n\ninclude-after-body: footer.html\n\nThe Epidemiologist R Handbook, 2024. Read, Github\n\nR 安装和帮助文件等写的非常细致\n\nScheuch, C., Voigt, S., & Weiss, P. (2023). Tidy Finance with R (1st ed.). Chapman and Hall/CRC. -Link-. Read, github, Quarto book\n\n_quarto.yml\n\nNicholas Tierney. Quarto for Scientists . 2024 . book, github, _quarto.yml\n使用 Quarto Website 的形式写的书\n\nto be added\n\n更多：awesome-quarto",
+    "crumbs": [
+      "**参考资料**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>教程和参考资料</span>"
+    ]
+  },
+  {
+    "objectID": "body/05_references.html#一些-github-仓库",
+    "href": "body/05_references.html#一些-github-仓库",
+    "title": "6  教程和参考资料",
+    "section": "6.4 一些 Github 仓库",
+    "text": "6.4 一些 Github 仓库\n这些仓库提供了形式各样的 Quarto Book 模板，你可以根据自己的需要进行修改。\n\ncoatless-tutorials / quarto-book-template\n\nTemplate repository for creating a book powered by Quarto and Rendered by GitHub Actions onto GitHub Pages.\n介绍了如何使用 github page 发布你的书稿\n\ntufte-quarto → website\n\nTufte book layout for Quarto. 可以将部分图片显示在网页的右侧边栏处。\n\nNOAA-quarto-book\n\nA Quarto book project with html, pdf and Word output types.",
+    "crumbs": [
+      "**参考资料**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>教程和参考资料</span>"
+    ]
+  },
+  {
+    "objectID": "body/05_references.html#quarto-for-scientists-中提到的资料",
+    "href": "body/05_references.html#quarto-for-scientists-中提到的资料",
+    "title": "6  教程和参考资料",
+    "section": "6.5 Quarto for Scientists 中提到的资料",
+    "text": "6.5 Quarto for Scientists 中提到的资料\n\nSource: Nicholas Tierney. Quarto for Scientists . 2024 . book, github, _quarto.yml\n\nHere are some resources that I really liked for learning Quarto:\n\nThe Quarto “get started” guide\nThe Quarto guide “Quarto manuscripts”\nThe Quarto chapter in “R for data science”\nMaking shareable documents with Quarto from, from OpenScapes\nAlison Hill’s blog post: “we don’t talk about Quarto”\nMine Çentinkaya-Rundel’s talk “Quarto for academics”",
+    "crumbs": [
+      "**参考资料**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>教程和参考资料</span>"
+    ]
+  },
+  {
+    "objectID": "body/A01_markdown.html",
+    "href": "body/A01_markdown.html",
+    "title": "7  Markdown",
+    "section": "",
+    "text": "7.1 何谓 Markdown？\nMarkdown 是一种轻量级的标记语言，允许你使用易读易写的纯文本格式编写文档，然后转换成结构化的 HTML, PDF, Word 等多种格式的文档。Markdown 语法简单易学，适合用来撰写笔记、文档、幻灯片等。\n大家在网上看到的很多博客文章，程序说明文档，甚至是在线书籍 (Python for Data Analysis, 3E)，都是用 Markdown 写的。",
+    "crumbs": [
+      "**附录**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "body/A01_markdown.html#语法速览",
+    "href": "body/A01_markdown.html#语法速览",
+    "title": "7  Markdown",
+    "section": "7.2 语法速览",
+    "text": "7.2 语法速览\n\n\n\n\n\n\nFigure 7.1: Markdown 语法对照\n\n\n\n你可以在如下网站按部就班地学习 Markdown 的基本用法，大概五分钟后你就可以掌握常用 Markdown 语法规则了：\n\nhttps://www.markdowntutorial.com/zh-cn",
+    "crumbs": [
+      "**附录**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "body/A01_markdown.html#markdown-基本语法",
+    "href": "body/A01_markdown.html#markdown-基本语法",
+    "title": "7  Markdown",
+    "section": "7.3 Markdown 基本语法",
+    "text": "7.3 Markdown 基本语法\n\nSource: markdownguide.org/cheat-sheet/\n\n这份 Markdown 备忘单介绍了常用的 Markdown 语法。为了便于您快速了解基本的语法规则，这里略去了很多细节信息，详情参见：基础语法 和 扩展语法。\n以下是 John Gruber 原始设计文档中列出的基本元素，所有 Markdown 应用程序都支持这些元素。\n\n\n\n\n\n\n\n元素\nMarkdown 语法\n\n\n\n\n标题\n# 一级标题## 二级标题### 三级标题\n\n\n粗体\n**粗体文本**\n\n\n斜体\n*斜体文本*\n\n\n引用块\n&gt; 引用内容\n\n\n有序列表\n1. 第一项2. 第二项3. 第三项\n\n\n无序列表\n- 第一项  -  第一条- 第二项- 第三项\n\n\n代码高亮显示\n`代码` (`xtreg` → xtreg)\n\n\n水平线\n---\n\n\n链接\n[连享会主页](https://www.lianxh.cn)\n\n\n图片\n![图片标题](/Fig/image.jpg) 或 ![](图片网址)\n\n\n\n\n7.3.1 表格\n| 命令    | 范例                 |\n| :------ | :------------------- |\n| xtreg   | `xtreg y x, fe`      |\n| reghdfe | `reghdfe y x, a(id)` |\n\n\n\n命令\n范例\n\n\n\n\nxtreg\nxtreg y x, fe\n\n\nreghdfe\nreghdfe y x, a(id)\n\n\n\n\n\n7.3.2 数学公式\n\n单行数学公式用 $$ 符号包围起来；\n行内数学公式用 $ 符号包围起来；\n包围符号内侧不要有空格，否则在有些 Markdown 编辑器中无法正常显示公式\n\n正确：$y = f(x)$\n错误：$ y = f(x) $ 或 $y = f(x) $\n\n有关 LaTeX 数学公式的语法和工具，参见：\n\nMarkdown常用LaTex数学公式\n神器-数学公式识别工具-mathpix\n\n\n模型设定为：\n\n$$y_{it} = \\alpha_i + x_{it}\\beta + u_{it}$$\n\n其中，$y_{it}$ 为被解释变量，$\\alpha_i$ 为个体效应。\n模型设定为：\n\\[y_{it} = \\alpha_i + x_{it}\\beta + u_{it}\\]\n其中，\\(y_{it}\\) 为被解释变量，\\(\\alpha_i\\) 为个体效应。\n\n\n7.3.3 代码块\n```python\nimport pandas as pd\n\ndf = pd.DataFrame({\n    'A': [1, 2, 3],\n    'B': [4, 5, 6]\n})\n```\n\n```stata\nsysuse \"auto.dta\", clear\nregress mpg weight\ndisplay \"Results: \" 2 + 3\n```\n渲染效果：\nimport pandas as pd\n\ndf = pd.DataFrame({\n    'A': [1, 2, 3],\n    'B': [4, 5, 6]\n})\nsysuse \"auto.dta\", clear\nregress mpg weight\ndisplay \"Results: \" 2 + 3\n\n\n7.3.4 扩展阅读\n\n初虹, 2024, 让「记录」变得简单：Markdown使用详解, 连享会 No.1456.\n初虹, 2021, 学术论文写作新武器：Markdown-上篇, 连享会 No.603.\n初虹, 2021, 学术论文写作新武器：Markdown-下篇, 连享会 No.604.\n初虹, 2021, 学术论文写作新武器：Markdown-中篇, 连享会 No.605.\n连玉君, 2024, VScode插件：安装、配置和使用, 连享会 No.1490.\n连玉君, 2024, VScode：实用 Markdown 插件推荐, 连享会 No.1390.",
+    "crumbs": [
+      "**附录**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "body/A01_markdown.html#marp-幻灯片",
+    "href": "body/A01_markdown.html#marp-幻灯片",
+    "title": "7  Markdown",
+    "section": "7.4 marp 幻灯片",
+    "text": "7.4 marp 幻灯片\n在 VScode 中安装 Marp 插件后，你可以使用 Markdown 语法来创建幻灯片。使用 Marp 最大的好处是你可以专注于内容，而不必担心幻灯片的格式和样式。Marp 会自动将你的 Markdown 文档转换为美观的幻灯片。\n\n\n7.4.1 模版 1：最基本的设定\n以下是一个简单的 Marp 幻灯片模板，你只需要新建一个 .md 文件，输入如下内容，然后在 VScode 中打开该文件即可：\n---\nmarp: true\n---\n\n# 幻灯片标题\n\n---\n\n## 第一页幻灯片\n\n- xxx\n- xxx\n\n---\n\n## 第二页幻灯片\n\n- xxx\n- xxx\n\n\n7.4.2 模版 2：更多的设定\n该模板的主要功能包括：\n\n幻灯片的标题、作者、页码、脚注\n幻灯片的字号\n标题的颜色和页面背景颜色\n\n---\nmarp: true\nsize: 16:9      # 宽版：4:3\npaginate: true  # 显示页码\nfooter: '脚注文本或 [xxx](URL)'\n---\n\n&lt;style&gt;\n/*一级标题局中*/\nsection.lead h1 {\n  text-align: center; /*其他参数：left, right*/\n}\nsection {\n  font-size: 22px;      /* 正文字号 */\n}\nh1 {\n  color: blackyellow;   /* 标题的颜色 */\n  /*font-size: 28px; */ /* 标题的字号, 其它标题也可以这样修改 */\n}\nh2 {\n  color: green;\n}\nh3 {\n  color: darkblue;\n}\n\n/* 右下角添加页码 */\nsection::after {\n  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total); \n}\nheader,\nfooter {\n  position: absolute;\n  left: 50px;\n  right: 50px;\n  height: 25px;\n}\n&lt;/style&gt;\n\n&lt;!--顶部文字--&gt;\n[lianxh.cn](https://www.lianxh.cn/news/46917f1076104.html) \n\n&lt;br&gt;\n\n&lt;!--封面图片--&gt;\n![bg right:50% w:400 brightness:. sepia:50%](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/20220722114227.png) \n\n&lt;!--幻灯片标题--&gt;\n# Marp 参数设置\n\n&lt;br&gt;\n&lt;br&gt;\n\n&lt;!--作者信息--&gt;\n[连玉君](https://www.lianxh.cn) (中山大学)\narlionn@163.com\n\n&lt;br&gt;\n---\n&lt;!-- backgroundColor: #FFFFF9 --&gt;\n## 第一页幻灯片\n\n- 背景是淡黄色的，可以根据需要修改颜色\n\n---\n&lt;!-- backgroundColor:white --&gt;\n## 第二页幻灯片\n\n- 背景是纯白色\n- 下面的图片在右侧，占页面 60% 的宽度\n\n![bg right:60% w:800](图片网址)\n详情参见：\n\n宋森安, 2021, 用Markdown制作幻灯片-五分钟学会Marp（上篇）, 连享会 No.656.\n宋森安, 2021, 用Markdown制作幻灯片-五分钟学会Marp（下篇）, 连享会 No.657.\n连玉君, 2022, Marp幻灯片模板：用Markdown快速写幻灯片, 连享会 No.1059.",
+    "crumbs": [
+      "**附录**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "body/A02_JupyterNotebook.html",
+    "href": "body/A02_JupyterNotebook.html",
+    "title": "8  Jupyter Notebook",
+    "section": "",
+    "text": "9 Python 代码\nQuarto book 也支持 .ipynb 文件。你可以在 Quarto book 中直接使用 Jupyter Notebook 文件。\nJupyter Notebook 文档中的代码块可以直接运行，输出的图片会被自动存储在 ./_static 目录下。当你通过 github pages 发布时，这些图片会被自动上传到 GitHub。\n一个 Jupyter Notebook 文档中可以支持多种编程语言。\n绘制函数图 \\(y = x^2\\) 的代码如下：\n# 绘制一幅简单的函数图\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-10, 10, 200)\ny = x ** 2\n\nplt.figure(figsize=(3, 2.5))\nplt.plot(x, y)\nplt.title(\"y = x^2\")\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.grid(True)\nplt.show()",
+    "crumbs": [
+      "**附录**",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Jupyter Notebook</span>"
+    ]
+  },
+  {
+    "objectID": "body/A02_JupyterNotebook.html#stata-代码",
+    "href": "body/A02_JupyterNotebook.html#stata-代码",
+    "title": "8  Jupyter Notebook",
+    "section": "9.1 Stata 代码",
+    "text": "9.1 Stata 代码\n使用 Stata 自带的 sysuse auto 数据集，绘制汽车价格与重量的散点图：\n\nsysuse \"auto.dta\", clear\ntwoway scatter mpg weight, scheme(cleanplots)\n\n(1978 automobile data)",
+    "crumbs": [
+      "**附录**",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Jupyter Notebook</span>"
+    ]
+  }
+]

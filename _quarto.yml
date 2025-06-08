@@ -28,24 +28,25 @@ book:
   chapters:
 
     - index.qmd
-    - body/_home.qmd
-    - body/00_intro.ipynb
+
     - part: "**Quarto 简介**"
       chapters: 
-        - body/00_py_with_AI_intro.ipynb
-        - body/00_py_with_AI_pic.ipynb
-        - body/01_1_install-Python-Anocanda.ipynb
+        - body/01_intro.md
+        - body/02_install_setting.md
 
     - part: "**创建 Quarto-book**"
       chapters: 
-        - body/data_02_data_type.ipynb
-        - body/render.ipynb
+        - body/03_YML_file.md
+        - body/04_github_page.md
       
     - part: "**参考资料**"
       chapters: 
-        - body/refs.ipynb
+        - body/05_references.md
 
-
+    - part: "**附录**"
+      chapters: 
+        - body/A01_markdown.md
+        - body/A02_JupyterNotebook.ipynb
 
 format:
   html:
