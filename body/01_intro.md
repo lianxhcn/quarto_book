@@ -23,7 +23,7 @@ Quarto book 是一个基于 [quarto](https://quarto.org/docs/books/) 的书籍�
 
 1. **Clone 模板**：
    - 将 [quarto_book](https://www.github.com/lianxhcn/quarto_book) 仓库克隆或下载到本地。
-2. **编译书籍**：
+2. **测试环境配置**：
    - 在 VScode 中打开项目根目录，进而打开 `_quarto.yml` 文件。
    - 按快捷键 `Ctrl+~` 打开 Terminal >> 输入 `quarto render` 即可开始编译。完成后项目根目录下会自动生成 `/docs` 子文件夹，其中包含编译后的 HTML 文件。
    - 通过我的电脑地址栏打开 `/docs` 文件夹，双击 `index.html` 文件即可在浏览器中预览书籍。
@@ -39,6 +39,11 @@ Quarto book 是一个基于 [quarto](https://quarto.org/docs/books/) 的书籍�
    - 在 VScode 中按 `Ctrl+~` 打开 Terminal >> 输入 `quarto render` 即可重新编译书籍。
    - 预览方式同上，双击 `/docs/index.html` 文件即可在浏览器中查看最新编译结果。
      - Note: 如果浏览器无法显示最新内容，请尝试清理浏览器缓存或使用无痕模式打开。
+   ![](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/20250609180318.png) 
+6. **发布书籍**：参见 [使用 GitHub Pages 发布](04_github_page.md)。
+
+
+
 
 ## 从头开始创建书稿
 

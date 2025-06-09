@@ -10,18 +10,18 @@ book:
   date-format: iso
 #  lang: zh  # 不要设置这个，会导致很多问题
   
-  sidebar: 
-    #title: "<a href='/index.html'>DS</a>"  # !important, 否则主页链返回链接会出错
-    logo: images/ds-book-logo-40.png
-    logo-href: https://book.lianxh.cn/ds/index.html
+  sidebar:    # 侧边栏配置
+    title: "Quarto Book"
+    logo: images/book-logo.png
+    logo-href: https://lianxhcn.github.io/quarto_book/
     style: floating  #docked
     search: true
     tools:
       - icon: github
         href: https://github.com/lianxhcn/quarto_book
 
-  favicon: images/ds-book-logo-40.png   # URL logo
-  site-url: https://book.lianxh.cn/ds/index.html # 主页地址, 否则点击右上角链接会乱码
+  favicon: images/book-logo.png   # URL logo
+  site-url: https://lianxhcn.github.io/quarto_book/ # 主页地址, 否则点击右上角链接会乱码
   editor: source    # 始终采用源代码模式编辑
 
 #----------------------- Chapters ---------------
@@ -68,6 +68,3 @@ format:
       - callout                        # 确保 markdown 支持 callout 块语法
 editor: visual
 
-# _quarto_yml refs
-# https://github.com/hadley/r4ds/blob/main/_quarto.yml
-# https://github.com/appliedepi/epiRhandbook_eng/

@@ -1,11 +1,12 @@
 ---
-title: "数据分析"
+title: "Home"
 author: "连玉君"
+numbered: false
 ---
 
  
 
-<img src="images/ds-book-front.png" style="width: 350px"/>
+<img src="images/book-front.png" width="350"/>
 
  
 

@@ -6,7 +6,7 @@
     "section": "",
     "text": "主页 || 课程 || 视频 || 推文 || 资料",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>数据分析</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
     ]
   },
   {
@@ -25,7 +25,7 @@
     "href": "body/01_intro.html#使用模板创建书稿-推荐",
     "title": "2  创建流程",
     "section": "",
-    "text": "Clone 模板：\n\n将 quarto_book 仓库克隆或下载到本地。\n\n编译书籍：\n\n在 VScode 中打开项目根目录，进而打开 _quarto.yml 文件。\n按快捷键 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可开始编译。完成后项目根目录下会自动生成 /docs 子文件夹，其中包含编译后的 HTML 文件。\n通过我的电脑地址栏打开 /docs 文件夹，双击 index.html 文件即可在浏览器中预览书籍。 以上步骤若能成功完成，说明你的 Quarto 环境配置正常。\n\n修改书籍基本信息：\n\n在 VScode 中打开项目根目录下的 _quarto.yml 文件，修改书籍的标题、作者等信息。\n打开 index.qmd 文件，编辑书籍简介。\n\n撰写你的书稿：\n\n各章书稿存放于 body/ 目录下。你可以在该目录下创建新的 .md, .qmd 或 .ipynb 文件，或编辑现有的章节文件。\n完成后，请参照第 3 步，更新 _quarto.yml 文件中的章节列表。\n\n编译和预览书籍：\n\n在 VScode 中按 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可重新编译书籍。\n预览方式同上，双击 /docs/index.html 文件即可在浏览器中查看最新编译结果。\n\nNote: 如果浏览器无法显示最新内容，请尝试清理浏览器缓存或使用无痕模式打开。",
+    "text": "Clone 模板：\n\n将 quarto_book 仓库克隆或下载到本地。\n\n测试环境配置：\n\n在 VScode 中打开项目根目录，进而打开 _quarto.yml 文件。\n按快捷键 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可开始编译。完成后项目根目录下会自动生成 /docs 子文件夹，其中包含编译后的 HTML 文件。\n通过我的电脑地址栏打开 /docs 文件夹，双击 index.html 文件即可在浏览器中预览书籍。 以上步骤若能成功完成，说明你的 Quarto 环境配置正常。\n\n修改书籍基本信息：\n\n在 VScode 中打开项目根目录下的 _quarto.yml 文件，修改书籍的标题、作者等信息。\n打开 index.qmd 文件，编辑书籍简介。\n\n撰写你的书稿：\n\n各章书稿存放于 body/ 目录下。你可以在该目录下创建新的 .md, .qmd 或 .ipynb 文件，或编辑现有的章节文件。\n完成后，请参照第 3 步，更新 _quarto.yml 文件中的章节列表。\n\n编译和预览书籍：\n\n在 VScode 中按 Ctrl+~ 打开 Terminal &gt;&gt; 输入 quarto render 即可重新编译书籍。\n预览方式同上，双击 /docs/index.html 文件即可在浏览器中查看最新编译结果。\n\nNote: 如果浏览器无法显示最新内容，请尝试清理浏览器缓存或使用无痕模式打开。 \n\n\n发布书籍：参见 使用 GitHub Pages 发布。",
     "crumbs": [
       "**Quarto 简介**",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>创建流程</span>"
@@ -166,45 +166,45 @@
   {
     "objectID": "body/04_github_page.html",
     "href": "body/04_github_page.html",
-    "title": "5  使用 GitHub Pages 发布 Quarto Book",
+    "title": "5  使用 GitHub Pages 发布",
     "section": "",
     "text": "5.1 发布流程\n本章以我的仓库 https://github.com/lianxhcn/quarto_book 为例，介绍如何使用 GitHub Desktop 创建 gh-pages 分支并完成 Quarto Book 的在线部署。\n完成后，你可以通过访问 https://lianxhcn.github.io/quarto_book/ 来查看部署效果。其他人可以通过该链接访问你的 Quarto Book。\n我们的目的是使用 docs 文件夹作为静态网页根目录，发布到 lianxhcn.github.io/quarto_book，推荐采用项目级 Pages方式，具体如下：",
     "crumbs": [
       "**创建 Quarto-book**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>使用 GitHub Pages 发布 Quarto Book</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>使用 GitHub Pages 发布</span>"
     ]
   },
   {
     "objectID": "body/04_github_page.html#发布流程",
     "href": "body/04_github_page.html#发布流程",
-    "title": "5  使用 GitHub Pages 发布 Quarto Book",
+    "title": "5  使用 GitHub Pages 发布",
     "section": "",
     "text": "5.1.1 步骤一：确保 docs 文件夹在主分支\n\n你已经把所有网页内容渲染到 docs，这是 GitHub Pages 推荐的目录名。\n\n\n\n5.1.2 步骤二：推送本地代码到 GitHub\n\n在 GitHub Desktop 中确认你的更改（见第二问）。\n确保主分支（main/master）与 GitHub 仓库同步。\n\n\n\n5.1.3 步骤三：在 GitHub 仓库中启用 Pages\n\n打开你的项目仓库页面： https://github.com/lianxhcn/quarto_book\n点击右上角的 Settings → 左侧栏选择 Pages 或 Pages（Beta）\n在 “Build and deployment” 下，Source 选择 “Deploy from a branch”\n选择：\n\nBranch：main（或你当前的主分支）\nFolder：/docs\n\n保存设置。\n\n\n\n5.1.4 步骤四：访问网页\n\n等待几分钟，GitHub 会自动生成页面。\n访问： https://lianxhcn.github.io/quarto_book/\n\n\n\n5.1.5 注意事项\n\n如果页面内容没更新，请确保每次用 quarto render 后及时将最新的 docs 文件夹推送到 GitHub。\n你可以通过更改 _quarto.yml 或其他源码，然后再次 render → push → 自动更新网页。",
     "crumbs": [
       "**创建 Quarto-book**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>使用 GitHub Pages 发布 Quarto Book</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>使用 GitHub Pages 发布</span>"
     ]
   },
   {
     "objectID": "body/04_github_page.html#github-desktop-实现-pull-和-push",
     "href": "body/04_github_page.html#github-desktop-实现-pull-和-push",
-    "title": "5  使用 GitHub Pages 发布 Quarto Book",
+    "title": "5  使用 GitHub Pages 发布",
     "section": "5.2 GitHub Desktop 实现 Pull 和 Push",
     "text": "5.2 GitHub Desktop 实现 Pull 和 Push\n以你的本地 D:\\Github_lianxh\\quarto_book 项目为例：\n\n5.2.1 初始设置（仅首次需要）\n\n打开 GitHub Desktop，File → Add local repository，选择你的本地文件夹。\n仓库面板左上角应看到 quarto_book 项目名，远程仓库自动连接到 https://github.com/lianxhcn/quarto_book。\n\n\n\n5.2.2 日常操作\nPull（拉取最新远程内容到本地）\n\n点击 GitHub Desktop 左上角的 “Current Branch”（确保在 main/master 分支）。\n点击右上角的 “Fetch origin”（如果有更新则会变成 “Pull origin”），点击它即可同步远程变更到本地。\n\nPush（推送本地更新到远程）\n\n正常编辑、修改、增加或删除文件。\n在 GitHub Desktop 主界面下方看到 “Changes” 列表，输入 Commit message（如 render new chapters），点击 “Commit to main”。\n提交后，界面会出现 “Push origin” 按钮，点击即可推送本地更改到 GitHub 仓库。\n\n\n\n5.2.3 补充说明\n\n新文件/文件夹：只要在本地新建（如新增章节），在 GitHub Desktop 中会自动识别到“Changes”，按上述流程提交。\n删除或重命名：同理，所有文件操作 GitHub Desktop 都会追踪。\n冲突：如遇 pull/push 冲突，按 GitHub Desktop 提示合并冲突后再 push。\n\n\n\n5.2.4 常见问题\n\ndocs 里无变化？ 确认用 quarto render 重新编译，且本地 docs 文件夹变动已被 Git 跟踪和推送。\n访问慢？ GitHub Pages 有时需几分钟才能看到更新。\n访问路径？ 若你以后需要发布为 lianxhcn.github.io 的主站，则结构和设置略有不同，目前发布到 lianxhcn.github.io/quarto_book 是标准做法。",
     "crumbs": [
       "**创建 Quarto-book**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>使用 GitHub Pages 发布 Quarto Book</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>使用 GitHub Pages 发布</span>"
     ]
   },
   {
     "objectID": "body/04_github_page.html#参考文档",
     "href": "body/04_github_page.html#参考文档",
-    "title": "5  使用 GitHub Pages 发布 Quarto Book",
+    "title": "5  使用 GitHub Pages 发布",
     "section": "5.3 参考文档",
     "text": "5.3 参考文档\n\nGitHub Pages 官方指南\nQuarto 官方关于发布到 GitHub Pages",
     "crumbs": [
       "**创建 Quarto-book**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>使用 GitHub Pages 发布 Quarto Book</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>使用 GitHub Pages 发布</span>"
     ]
   },
   {

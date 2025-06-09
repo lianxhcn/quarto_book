@@ -1,4 +1,4 @@
-# 使用 GitHub Pages 发布 Quarto Book
+# 使用 GitHub Pages 发布
 
 本章以我的仓库 <https://github.com/lianxhcn/quarto_book> 为例，介绍如何使用 **GitHub Desktop** 创建 `gh-pages` 分支并完成 Quarto Book 的在线部署。
 

@@ -1,1 +1,1 @@
-Sitemap: https://book.lianxh.cn/ds/index.html/sitemap.xml
+Sitemap: https://lianxhcn.github.io/quarto_book/sitemap.xml
