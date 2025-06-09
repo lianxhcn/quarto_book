@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; 网页发布 – Quarto Book</title>
+<title>5&nbsp; 使用 GitHub Pages 发布 Quarto Book – Quarto Book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -117,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../body/03_YML_file.html"><strong>创建 Quarto-book</strong></a></li><li class="breadcrumb-item"><a href="../body/04_github_page.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">网页发布</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../body/03_YML_file.html"><strong>创建 Quarto-book</strong></a></li><li class="breadcrumb-item"><a href="../body/04_github_page.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">使用 GitHub Pages 发布 Quarto Book</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -200,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../body/04_github_page.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">网页发布</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">使用 GitHub Pages 发布 Quarto Book</span></span></a>
   </div>
 </li>
       </ul>
@@ -255,22 +221,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#步骤-1克隆仓库到本地" id="toc-步骤-1克隆仓库到本地" class="nav-link active" data-scroll-target="#步骤-1克隆仓库到本地"><span class="header-section-number">5.1</span> 步骤 1：克隆仓库到本地</a></li>
-  <li><a href="#步骤-2创建-gh-pages-分支" id="toc-步骤-2创建-gh-pages-分支" class="nav-link" data-scroll-target="#步骤-2创建-gh-pages-分支"><span class="header-section-number">5.2</span> 步骤 2：创建 <code>gh-pages</code> 分支</a></li>
-  <li><a href="#步骤-3准备-quarto-输出文件" id="toc-步骤-3准备-quarto-输出文件" class="nav-link" data-scroll-target="#步骤-3准备-quarto-输出文件"><span class="header-section-number">5.3</span> 步骤 3：准备 Quarto 输出文件</a></li>
-  <li><a href="#步骤-4提交文件到本地分支" id="toc-步骤-4提交文件到本地分支" class="nav-link" data-scroll-target="#步骤-4提交文件到本地分支"><span class="header-section-number">5.4</span> 步骤 4：提交文件到本地分支</a></li>
-  <li><a href="#步骤-5推送-gh-pages-分支到远程仓库" id="toc-步骤-5推送-gh-pages-分支到远程仓库" class="nav-link" data-scroll-target="#步骤-5推送-gh-pages-分支到远程仓库"><span class="header-section-number">5.5</span> 步骤 5：推送 <code>gh-pages</code> 分支到远程仓库</a></li>
-  <li><a href="#步骤-6验证-github-pages-部署" id="toc-步骤-6验证-github-pages-部署" class="nav-link" data-scroll-target="#步骤-6验证-github-pages-部署"><span class="header-section-number">5.6</span> 步骤 6：验证 GitHub Pages 部署</a></li>
-  <li><a href="#常见问题与注意事项" id="toc-常见问题与注意事项" class="nav-link" data-scroll-target="#常见问题与注意事项"><span class="header-section-number">5.7</span> 常见问题与注意事项</a></li>
+  <li><a href="#发布流程" id="toc-发布流程" class="nav-link active" data-scroll-target="#发布流程"><span class="header-section-number">5.1</span> 发布流程</a>
+  <ul class="collapse">
+  <li><a href="#步骤一确保-docs-文件夹在主分支" id="toc-步骤一确保-docs-文件夹在主分支" class="nav-link" data-scroll-target="#步骤一确保-docs-文件夹在主分支"><span class="header-section-number">5.1.1</span> 步骤一：确保 docs 文件夹在主分支</a></li>
+  <li><a href="#步骤二推送本地代码到-github" id="toc-步骤二推送本地代码到-github" class="nav-link" data-scroll-target="#步骤二推送本地代码到-github"><span class="header-section-number">5.1.2</span> 步骤二：推送本地代码到 GitHub</a></li>
+  <li><a href="#步骤三在-github-仓库中启用-pages" id="toc-步骤三在-github-仓库中启用-pages" class="nav-link" data-scroll-target="#步骤三在-github-仓库中启用-pages"><span class="header-section-number">5.1.3</span> 步骤三：在 GitHub 仓库中启用 Pages</a></li>
+  <li><a href="#步骤四访问网页" id="toc-步骤四访问网页" class="nav-link" data-scroll-target="#步骤四访问网页"><span class="header-section-number">5.1.4</span> 步骤四：访问网页</a></li>
+  <li><a href="#注意事项" id="toc-注意事项" class="nav-link" data-scroll-target="#注意事项"><span class="header-section-number">5.1.5</span> 注意事项</a></li>
+  </ul></li>
+  <li><a href="#github-desktop-实现-pull-和-push" id="toc-github-desktop-实现-pull-和-push" class="nav-link" data-scroll-target="#github-desktop-实现-pull-和-push"><span class="header-section-number">5.2</span> GitHub Desktop 实现 Pull 和 Push</a>
+  <ul class="collapse">
+  <li><a href="#初始设置仅首次需要" id="toc-初始设置仅首次需要" class="nav-link" data-scroll-target="#初始设置仅首次需要"><span class="header-section-number">5.2.1</span> 初始设置（仅首次需要）</a></li>
+  <li><a href="#日常操作" id="toc-日常操作" class="nav-link" data-scroll-target="#日常操作"><span class="header-section-number">5.2.2</span> 日常操作</a></li>
+  <li><a href="#补充说明" id="toc-补充说明" class="nav-link" data-scroll-target="#补充说明"><span class="header-section-number">5.2.3</span> 补充说明</a></li>
+  <li><a href="#常见问题" id="toc-常见问题" class="nav-link" data-scroll-target="#常见问题"><span class="header-section-number">5.2.4</span> 常见问题</a></li>
+  </ul></li>
+  <li><a href="#参考文档" id="toc-参考文档" class="nav-link" data-scroll-target="#参考文档"><span class="header-section-number">5.3</span> 参考文档</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../body/03_YML_file.html"><strong>创建 Quarto-book</strong></a></li><li class="breadcrumb-item"><a href="../body/04_github_page.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">网页发布</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../body/03_YML_file.html"><strong>创建 Quarto-book</strong></a></li><li class="breadcrumb-item"><a href="../body/04_github_page.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">使用 GitHub Pages 发布 Quarto Book</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">网页发布</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">使用 GitHub Pages 发布 Quarto Book</span></h1>
 </div>
 
 
@@ -289,108 +264,98 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>本章以我的仓库 <a href="https://github.com/lianxhcn/quarto_book" class="uri">https://github.com/lianxhcn/quarto_book</a> 为例，介绍如何使用 <strong>GitHub Desktop</strong> 创建 <code>gh-pages</code> 分支并完成 Quarto Book 的在线部署。</p>
 <p>完成后，你可以通过访问 <a href="https://lianxhcn.github.io/quarto_book/" class="uri">https://lianxhcn.github.io/quarto_book/</a> 来查看部署效果。其他人可以通过该链接访问你的 Quarto Book。</p>
-<section id="步骤-1克隆仓库到本地" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="步骤-1克隆仓库到本地"><span class="header-section-number">5.1</span> 步骤 1：克隆仓库到本地</h2>
-<ol type="1">
-<li><p>打开 <strong>GitHub Desktop</strong>，点击左上角 <strong>File</strong> &gt; <strong>Clone Repository</strong>。<br>
-</p></li>
-<li><p>在 <strong>URL</strong> 栏输入你的仓库地址：</p>
-<pre><code>https://github.com/lianxhcn/quarto_book.git</code></pre></li>
-<li><p>选择本地保存路径（例如 <code>D:\Github_lianxh\quarto_book</code>），点击 <strong>Clone</strong>。</p>
+<section id="发布流程" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="发布流程"><span class="header-section-number">5.1</span> 发布流程</h2>
+<p>我们的目的是使用 <code>docs</code> 文件夹作为静态网页根目录，发布到 <code>lianxhcn.github.io/quarto_book</code>，推荐采用<strong>项目级 Pages</strong>方式，具体如下：</p>
+<section id="步骤一确保-docs-文件夹在主分支" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="步骤一确保-docs-文件夹在主分支"><span class="header-section-number">5.1.1</span> 步骤一：确保 docs 文件夹在主分支</h3>
 <ul>
-<li>此时本地会生成一个与远程仓库同步的文件夹，默认分支为 <code>main</code>（或 <code>master</code>，取决于仓库初始设置）。</li>
-</ul></li>
+<li>你已经把所有网页内容渲染到 <code>docs</code>，这是 GitHub Pages 推荐的目录名。</li>
+</ul>
+</section>
+<section id="步骤二推送本地代码到-github" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="步骤二推送本地代码到-github"><span class="header-section-number">5.1.2</span> 步骤二：推送本地代码到 GitHub</h3>
+<ol type="1">
+<li>在 <strong>GitHub Desktop</strong> 中确认你的更改（见第二问）。</li>
+<li>确保主分支（main/master）与 GitHub 仓库同步。</li>
 </ol>
 </section>
-<section id="步骤-2创建-gh-pages-分支" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="步骤-2创建-gh-pages-分支"><span class="header-section-number">5.2</span> 步骤 2：创建 <code>gh-pages</code> 分支</h2>
+<section id="步骤三在-github-仓库中启用-pages" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="步骤三在-github-仓库中启用-pages"><span class="header-section-number">5.1.3</span> 步骤三：在 GitHub 仓库中启用 Pages</h3>
 <ol type="1">
-<li>在 GitHub Desktop 右上角，点击当前分支名称（默认是 <code>main</code>）。<br>
-</li>
-<li>在弹出的分支切换菜单中，点击 <strong>New branch</strong>。<br>
-</li>
-<li>输入分支名称：<code>gh-pages</code>，点击 <strong>Create branch</strong>。
+<li><p>打开你的项目仓库页面： <a href="https://github.com/lianxhcn/quarto_book">https://github.com/lianxhcn/quarto_book</a></p></li>
+<li><p>点击右上角的 <strong>Settings</strong> → 左侧栏选择 <strong>Pages</strong> 或 <strong>Pages（Beta）</strong></p></li>
+<li><p>在 “Build and deployment” 下，<strong>Source</strong> 选择 “Deploy from a branch”</p></li>
+<li><p>选择：</p>
 <ul>
-<li>此时你已切换到本地的 <code>gh-pages</code> 分支。</li>
+<li>Branch：<code>main</code>（或你当前的主分支）</li>
+<li>Folder：<code>/docs</code></li>
 </ul></li>
+<li><p>保存设置。</p></li>
 </ol>
 </section>
-<section id="步骤-3准备-quarto-输出文件" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="步骤-3准备-quarto-输出文件"><span class="header-section-number">5.3</span> 步骤 3：准备 Quarto 输出文件</h2>
-<ol type="1">
-<li>将 Quarto 编译生成的 <code>docs</code> 文件夹内的<strong>所有内容</strong>（如 <code>index.html</code>、静态资源等）复制到本地仓库的<strong>根目录</strong>。
+<section id="步骤四访问网页" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="步骤四访问网页"><span class="header-section-number">5.1.4</span> 步骤四：访问网页</h3>
 <ul>
-<li><strong>注意</strong>：确保根目录下的文件是 Quarto 站点的完整内容（即 <code>docs</code> 文件夹内的文件直接放在仓库根目录，而不是保留 <code>docs</code> 文件夹本身）。<br>
-</li>
-<li>例如：若 <code>docs</code> 文件夹内有 <code>index.html</code>，复制后仓库根目录应直接包含 <code>index.html</code>。</li>
-</ul></li>
+<li>等待几分钟，GitHub 会自动生成页面。</li>
+<li>访问： <a href="https://lianxhcn.github.io/quarto_book/">https://lianxhcn.github.io/quarto_book/</a></li>
+</ul>
+</section>
+<section id="注意事项" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="注意事项"><span class="header-section-number">5.1.5</span> 注意事项</h3>
+<ul>
+<li>如果页面内容没更新，请确保每次用 <code>quarto render</code> 后及时将最新的 <code>docs</code> 文件夹<strong>推送</strong>到 GitHub。</li>
+<li>你可以通过更改 <code>_quarto.yml</code> 或其他源码，然后再次 render → push → 自动更新网页。</li>
+</ul>
+</section>
+</section>
+<section id="github-desktop-实现-pull-和-push" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="github-desktop-实现-pull-和-push"><span class="header-section-number">5.2</span> GitHub Desktop 实现 Pull 和 Push</h2>
+<p>以你的本地 <code>D:\Github_lianxh\quarto_book</code> 项目为例：</p>
+<section id="初始设置仅首次需要" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="初始设置仅首次需要"><span class="header-section-number">5.2.1</span> 初始设置（仅首次需要）</h3>
+<ol type="1">
+<li>打开 GitHub Desktop，File → Add local repository，选择你的本地文件夹。</li>
+<li>仓库面板左上角应看到 <code>quarto_book</code> 项目名，远程仓库自动连接到 <code>https://github.com/lianxhcn/quarto_book</code>。</li>
 </ol>
 </section>
-<section id="步骤-4提交文件到本地分支" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="步骤-4提交文件到本地分支"><span class="header-section-number">5.4</span> 步骤 4：提交文件到本地分支</h2>
+<section id="日常操作" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="日常操作"><span class="header-section-number">5.2.2</span> 日常操作</h3>
+<p><strong>Pull（拉取最新远程内容到本地）</strong></p>
 <ol type="1">
-<li>在 GitHub Desktop 左侧的 <strong>Changes</strong> 选项卡中，会显示新增/修改的文件。<br>
-</li>
-<li>在 <strong>Summary</strong> 栏输入提交信息（如 “Add Quarto book files for gh-pages”）。<br>
-</li>
-<li>点击 <strong>Commit to gh-pages</strong> 完成本地提交。</li>
+<li>点击 GitHub Desktop 左上角的 “Current Branch”（确保在 main/master 分支）。</li>
+<li>点击右上角的 “Fetch origin”（如果有更新则会变成 “Pull origin”），点击它即可同步远程变更到本地。</li>
+</ol>
+<p><strong>Push（推送本地更新到远程）</strong></p>
+<ol type="1">
+<li>正常编辑、修改、增加或删除文件。</li>
+<li>在 GitHub Desktop 主界面下方看到 “Changes” 列表，输入 Commit message（如 <code>render new chapters</code>），点击 “Commit to main”。</li>
+<li>提交后，界面会出现 “Push origin” 按钮，点击即可推送本地更改到 GitHub 仓库。</li>
 </ol>
 </section>
-<section id="步骤-5推送-gh-pages-分支到远程仓库" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="步骤-5推送-gh-pages-分支到远程仓库"><span class="header-section-number">5.5</span> 步骤 5：推送 <code>gh-pages</code> 分支到远程仓库</h2>
-<ol type="1">
-<li>点击右上角的 <strong>Push origin</strong> 按钮（通常在分支名称右侧）。<br>
-</li>
-<li>确认推送操作，等待进度条完成。
+<section id="补充说明" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="补充说明"><span class="header-section-number">5.2.3</span> 补充说明</h3>
 <ul>
-<li>此时远程仓库（<code>https://github.com/lianxhcn/quarto_book</code>）会新增 <code>gh-pages</code> 分支，并包含你的 Quarto 站点文件。</li>
-</ul></li>
-</ol>
+<li><strong>新文件/文件夹</strong>：只要在本地新建（如新增章节），在 GitHub Desktop 中会自动识别到“Changes”，按上述流程提交。</li>
+<li><strong>删除或重命名</strong>：同理，所有文件操作 GitHub Desktop 都会追踪。</li>
+<li><strong>冲突</strong>：如遇 pull/push 冲突，按 GitHub Desktop 提示合并冲突后再 push。</li>
+</ul>
 </section>
-<section id="步骤-6验证-github-pages-部署" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="步骤-6验证-github-pages-部署"><span class="header-section-number">5.6</span> 步骤 6：验证 GitHub Pages 部署</h2>
-<ol type="1">
-<li><p>登录 GitHub，进入你的仓库：<a href="https://github.com/lianxhcn/quarto_book">https://github.com/lianxhcn/quarto_book</a>。<br>
-</p></li>
-<li><p>点击顶部菜单的 <strong>Settings</strong> &gt; <strong>Pages</strong>（左侧栏）。<br>
-</p></li>
-<li><p>在 <strong>Source</strong> 部分，选择 <strong>Branch: gh-pages</strong>，并点击 <strong>Save</strong>。</p>
+<section id="常见问题" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="常见问题"><span class="header-section-number">5.2.4</span> 常见问题</h3>
 <ul>
-<li>稍等片刻（通常几分钟内），GitHub 会自动部署页面。<br>
-</li>
-</ul></li>
-<li><p>部署完成后，页面顶部会显示访问链接：</p>
-<pre><code>https://lianxhcn.github.io/quarto_book/</code></pre>
-<ul>
-<li>点击链接即可访问你的 Quarto Book。</li>
-</ul></li>
-</ol>
+<li><strong>docs 里无变化？</strong> 确认用 <code>quarto render</code> 重新编译，且本地 docs 文件夹变动已被 Git 跟踪和推送。</li>
+<li><strong>访问慢？</strong> GitHub Pages 有时需几分钟才能看到更新。</li>
+<li><strong>访问路径？</strong> 若你以后需要发布为 <code>lianxhcn.github.io</code> 的主站，则结构和设置略有不同，目前发布到 <code>lianxhcn.github.io/quarto_book</code> 是标准做法。</li>
+</ul>
 </section>
-<section id="常见问题与注意事项" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="常见问题与注意事项"><span class="header-section-number">5.7</span> 常见问题与注意事项</h2>
-<ol type="1">
-<li><strong>文件结构问题</strong>：
+</section>
+<section id="参考文档" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="参考文档"><span class="header-section-number">5.3</span> 参考文档</h2>
 <ul>
-<li><p>若保留 <code>docs</code> 文件夹（即仓库根目录下有 <code>docs/index.html</code>），访问路径需改为：</p>
-<pre><code>https://lianxhcn.github.io/quarto_book/docs/</code></pre>
-<p>这可能不符合预期，建议直接将内容放在根目录。</p></li>
-</ul></li>
-<li><strong>分支名称</strong>：
-<ul>
-<li>GitHub Pages 默认识别 <code>gh-pages</code> 或 <code>main</code> 分支（需在设置中手动选择），确保分支名称正确。</li>
-</ul></li>
-<li><strong>更新内容</strong>：
-<ul>
-<li>后续修改内容后，只需在本地 <code>gh-pages</code> 分支更新文件，重新提交并推送即可。</li>
-</ul></li>
-<li><strong>强制推送（可选）</strong>：
-<ul>
-<li><p>若远程分支已有冲突，可尝试强制推送：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 在 Git 终端执行（需先切换到本地 gh-pages 分支）</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin gh-pages <span class="at">--force</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul></li>
-</ol>
-<p>通过以上步骤，你可以通过 GitHub Desktop 轻松创建并部署 <code>gh-pages</code> 分支，实现 Quarto Book 的在线访问。</p>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub Pages 官方指南</a></li>
+<li><a href="https://quarto.org/docs/publishing/github-pages.html">Quarto 官方关于发布到 GitHub Pages</a></li>
+</ul>
 
 
 </section>

@@ -1,77 +1,87 @@
-# 网页发布
+# 使用 GitHub Pages 发布 Quarto Book
 
 本章以我的仓库 <https://github.com/lianxhcn/quarto_book> 为例，介绍如何使用 **GitHub Desktop** 创建 `gh-pages` 分支并完成 Quarto Book 的在线部署。
 
 完成后，你可以通过访问 <https://lianxhcn.github.io/quarto_book/> 来查看部署效果。其他人可以通过该链接访问你的 Quarto Book。
 
+## 发布流程
 
-## 步骤 1：克隆仓库到本地
-1. 打开 **GitHub Desktop**，点击左上角 **File** > **Clone Repository**。  
-2. 在 **URL** 栏输入你的仓库地址：  
-   ```
-   https://github.com/lianxhcn/quarto_book.git
-   ```  
-3. 选择本地保存路径（例如 `D:\Github_lianxh\quarto_book`），点击 **Clone**。  
-   - 此时本地会生成一个与远程仓库同步的文件夹，默认分支为 `main`（或 `master`，取决于仓库初始设置）。
+我们的目的是使用 `docs` 文件夹作为静态网页根目录，发布到 `lianxhcn.github.io/quarto_book`，推荐采用**项目级 Pages**方式，具体如下：
 
+### 步骤一：确保 docs 文件夹在主分支
 
-## 步骤 2：创建 `gh-pages` 分支
-1. 在 GitHub Desktop 右上角，点击当前分支名称（默认是 `main`）。  
-2. 在弹出的分支切换菜单中，点击 **New branch**。  
-3. 输入分支名称：`gh-pages`，点击 **Create branch**。  
-   - 此时你已切换到本地的 `gh-pages` 分支。
+* 你已经把所有网页内容渲染到 `docs`，这是 GitHub Pages 推荐的目录名。
 
+### 步骤二：推送本地代码到 GitHub
 
-## 步骤 3：准备 Quarto 输出文件
-1. 将 Quarto 编译生成的 `docs` 文件夹内的**所有内容**（如 `index.html`、静态资源等）复制到本地仓库的**根目录**。  
-   - **注意**：确保根目录下的文件是 Quarto 站点的完整内容（即 `docs` 文件夹内的文件直接放在仓库根目录，而不是保留 `docs` 文件夹本身）。  
-   - 例如：若 `docs` 文件夹内有 `index.html`，复制后仓库根目录应直接包含 `index.html`。
+1. 在 **GitHub Desktop** 中确认你的更改（见第二问）。
+2. 确保主分支（main/master）与 GitHub 仓库同步。
 
+### 步骤三：在 GitHub 仓库中启用 Pages
 
-## 步骤 4：提交文件到本地分支
-1. 在 GitHub Desktop 左侧的 **Changes** 选项卡中，会显示新增/修改的文件。  
-2. 在 **Summary** 栏输入提交信息（如 “Add Quarto book files for gh-pages”）。  
-3. 点击 **Commit to gh-pages** 完成本地提交。
+1. 打开你的项目仓库页面：
+   [https://github.com/lianxhcn/quarto\_book](https://github.com/lianxhcn/quarto_book)
+2. 点击右上角的 **Settings** → 左侧栏选择 **Pages** 或 **Pages（Beta）**
+3. 在 “Build and deployment” 下，**Source** 选择 “Deploy from a branch”
+4. 选择：
 
+   * Branch：`main`（或你当前的主分支）
+   * Folder：`/docs`
+5. 保存设置。
 
-## 步骤 5：推送 `gh-pages` 分支到远程仓库
-1. 点击右上角的 **Push origin** 按钮（通常在分支名称右侧）。  
-2. 确认推送操作，等待进度条完成。  
-   - 此时远程仓库（`https://github.com/lianxhcn/quarto_book`）会新增 `gh-pages` 分支，并包含你的 Quarto 站点文件。
+### 步骤四：访问网页
 
+* 等待几分钟，GitHub 会自动生成页面。
+* 访问：
+  [https://lianxhcn.github.io/quarto\_book/](https://lianxhcn.github.io/quarto_book/)
 
-## 步骤 6：验证 GitHub Pages 部署
-1. 登录 GitHub，进入你的仓库：[https://github.com/lianxhcn/quarto_book](https://github.com/lianxhcn/quarto_book)。  
-2. 点击顶部菜单的 **Settings** > **Pages**（左侧栏）。  
-3. 在 **Source** 部分，选择 **Branch: gh-pages**，并点击 **Save**。  
-   - 稍等片刻（通常几分钟内），GitHub 会自动部署页面。  
-4. 部署完成后，页面顶部会显示访问链接：  
-   ```
-   https://lianxhcn.github.io/quarto_book/
-   ```  
-   - 点击链接即可访问你的 Quarto Book。
+### 注意事项
+
+* 如果页面内容没更新，请确保每次用 `quarto render` 后及时将最新的 `docs` 文件夹**推送**到 GitHub。
+* 你可以通过更改 `_quarto.yml` 或其他源码，然后再次 render → push → 自动更新网页。
 
 
-## 常见问题与注意事项
-1. **文件结构问题**：  
-   - 若保留 `docs` 文件夹（即仓库根目录下有 `docs/index.html`），访问路径需改为：  
-     ```
-     https://lianxhcn.github.io/quarto_book/docs/
-     ```  
-     这可能不符合预期，建议直接将内容放在根目录。  
 
-2. **分支名称**：  
-   - GitHub Pages 默认识别 `gh-pages` 或 `main` 分支（需在设置中手动选择），确保分支名称正确。  
+## GitHub Desktop 实现 Pull 和 Push
 
-3. **更新内容**：  
-   - 后续修改内容后，只需在本地 `gh-pages` 分支更新文件，重新提交并推送即可。  
+以你的本地 `D:\Github_lianxh\quarto_book` 项目为例：
 
-4. **强制推送（可选）**：  
-   - 若远程分支已有冲突，可尝试强制推送：  
-     ```bash
-     # 在 Git 终端执行（需先切换到本地 gh-pages 分支）
-     git push origin gh-pages --force
-     ```
+### 初始设置（仅首次需要）
+
+1. 打开 GitHub Desktop，File → Add local repository，选择你的本地文件夹。
+2. 仓库面板左上角应看到 `quarto_book` 项目名，远程仓库自动连接到 `https://github.com/lianxhcn/quarto_book`。
+
+### 日常操作
+
+**Pull（拉取最新远程内容到本地）**
+
+1. 点击 GitHub Desktop 左上角的 “Current Branch”（确保在 main/master 分支）。
+2. 点击右上角的 “Fetch origin”（如果有更新则会变成 “Pull origin”），点击它即可同步远程变更到本地。
+
+**Push（推送本地更新到远程）**
+
+1. 正常编辑、修改、增加或删除文件。
+2. 在 GitHub Desktop 主界面下方看到 “Changes” 列表，输入 Commit message（如 `render new chapters`），点击 “Commit to main”。
+3. 提交后，界面会出现 “Push origin” 按钮，点击即可推送本地更改到 GitHub 仓库。
+
+### 补充说明
+
+* **新文件/文件夹**：只要在本地新建（如新增章节），在 GitHub Desktop 中会自动识别到“Changes”，按上述流程提交。
+* **删除或重命名**：同理，所有文件操作 GitHub Desktop 都会追踪。
+* **冲突**：如遇 pull/push 冲突，按 GitHub Desktop 提示合并冲突后再 push。
+
+### 常见问题
+
+* **docs 里无变化？**
+  确认用 `quarto render` 重新编译，且本地 docs 文件夹变动已被 Git 跟踪和推送。
+* **访问慢？**
+  GitHub Pages 有时需几分钟才能看到更新。
+* **访问路径？**
+  若你以后需要发布为 `lianxhcn.github.io` 的主站，则结构和设置略有不同，目前发布到 `lianxhcn.github.io/quarto_book` 是标准做法。
+
+## 参考文档
+
+* [GitHub Pages 官方指南](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
+* [Quarto 官方关于发布到 GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
 
 
-通过以上步骤，你可以通过 GitHub Desktop 轻松创建并部署 `gh-pages` 分支，实现 Quarto Book 的在线访问。

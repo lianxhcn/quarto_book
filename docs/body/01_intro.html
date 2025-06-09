@@ -200,7 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../body/04_github_page.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">网页发布</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">使用 GitHub Pages 发布 Quarto Book</span></span></a>
   </div>
 </li>
       </ul>
@@ -302,27 +302,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="2.1" class="anchored" data-anchor-id="使用模板创建书稿-推荐"><span class="header-section-number">2.1</span> 使用模板创建书稿 (推荐)</h2>
 <p>在执行如下步骤之前，请先确保你已经完成了 <a href="../body/02_install_setting.html">环境配置</a> 的相关工作。</p>
 <ol type="1">
-<li><p><strong>Clone 模板</strong>：</p>
+<li><strong>Clone 模板</strong>：
 <ul>
 <li>将 <a href="https://www.github.com/lianxhcn/quarto_book">quarto_book</a> 仓库克隆或下载到本地。</li>
 </ul></li>
-<li><p><strong>编译书籍</strong>：</p>
+<li><strong>编译书籍</strong>：
 <ul>
 <li>在 VScode 中打开项目根目录，进而打开 <code>_quarto.yml</code> 文件。</li>
 <li>按快捷键 <code>Ctrl+~</code> 打开 Terminal &gt;&gt; 输入 <code>quarto render</code> 即可开始编译。完成后项目根目录下会自动生成 <code>/docs</code> 子文件夹，其中包含编译后的 HTML 文件。</li>
 <li>通过我的电脑地址栏打开 <code>/docs</code> 文件夹，双击 <code>index.html</code> 文件即可在浏览器中预览书籍。 以上步骤若能成功完成，说明你的 Quarto 环境配置正常。</li>
 </ul></li>
-<li><p><strong>修改书籍基本信息</strong>：</p>
+<li><strong>修改书籍基本信息</strong>：
 <ul>
 <li>在 VScode 中打开项目根目录下的 <code>_quarto.yml</code> 文件，修改书籍的标题、作者等信息。</li>
 <li>打开 <code>index.qmd</code> 文件，编辑书籍简介。</li>
 </ul></li>
-<li><p><strong>撰写你的书稿</strong>：</p>
+<li><strong>撰写你的书稿</strong>：
 <ul>
 <li>各章书稿存放于 <code>body/</code> 目录下。你可以在该目录下创建新的 <code>.md</code>, <code>.qmd</code> 或 <code>.ipynb</code> 文件，或编辑现有的章节文件。</li>
 <li>完成后，请参照第 3 步，更新 <code>_quarto.yml</code> 文件中的章节列表。</li>
 </ul></li>
-<li><p><strong>编译和预览书籍</strong>：</p>
+<li><strong>编译和预览书籍</strong>：
 <ul>
 <li>在 VScode 中按 <code>Ctrl+~</code> 打开 Terminal &gt;&gt; 输入 <code>quarto render</code> 即可重新编译书籍。</li>
 <li>预览方式同上，双击 <code>/docs/index.html</code> 文件即可在浏览器中查看最新编译结果。
