@@ -221,20 +221,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#发布流程" id="toc-发布流程" class="nav-link active" data-scroll-target="#发布流程"><span class="header-section-number">5.1</span> 发布流程</a>
-  <ul class="collapse">
-  <li><a href="#步骤一确保-docs-文件夹在主分支" id="toc-步骤一确保-docs-文件夹在主分支" class="nav-link" data-scroll-target="#步骤一确保-docs-文件夹在主分支"><span class="header-section-number">5.1.1</span> 步骤一：确保 docs 文件夹在主分支</a></li>
-  <li><a href="#步骤二推送本地代码到-github" id="toc-步骤二推送本地代码到-github" class="nav-link" data-scroll-target="#步骤二推送本地代码到-github"><span class="header-section-number">5.1.2</span> 步骤二：推送本地代码到 GitHub</a></li>
-  <li><a href="#步骤三在-github-仓库中启用-pages" id="toc-步骤三在-github-仓库中启用-pages" class="nav-link" data-scroll-target="#步骤三在-github-仓库中启用-pages"><span class="header-section-number">5.1.3</span> 步骤三：在 GitHub 仓库中启用 Pages</a></li>
-  <li><a href="#步骤四访问网页" id="toc-步骤四访问网页" class="nav-link" data-scroll-target="#步骤四访问网页"><span class="header-section-number">5.1.4</span> 步骤四：访问网页</a></li>
-  <li><a href="#注意事项" id="toc-注意事项" class="nav-link" data-scroll-target="#注意事项"><span class="header-section-number">5.1.5</span> 注意事项</a></li>
-  </ul></li>
+  <li><a href="#发布流程" id="toc-发布流程" class="nav-link active" data-scroll-target="#发布流程"><span class="header-section-number">5.1</span> 发布流程</a></li>
   <li><a href="#github-desktop-实现-pull-和-push" id="toc-github-desktop-实现-pull-和-push" class="nav-link" data-scroll-target="#github-desktop-实现-pull-和-push"><span class="header-section-number">5.2</span> GitHub Desktop 实现 Pull 和 Push</a>
   <ul class="collapse">
   <li><a href="#初始设置仅首次需要" id="toc-初始设置仅首次需要" class="nav-link" data-scroll-target="#初始设置仅首次需要"><span class="header-section-number">5.2.1</span> 初始设置（仅首次需要）</a></li>
   <li><a href="#日常操作" id="toc-日常操作" class="nav-link" data-scroll-target="#日常操作"><span class="header-section-number">5.2.2</span> 日常操作</a></li>
   <li><a href="#补充说明" id="toc-补充说明" class="nav-link" data-scroll-target="#补充说明"><span class="header-section-number">5.2.3</span> 补充说明</a></li>
-  <li><a href="#常见问题" id="toc-常见问题" class="nav-link" data-scroll-target="#常见问题"><span class="header-section-number">5.2.4</span> 常见问题</a></li>
   </ul></li>
   <li><a href="#参考文档" id="toc-参考文档" class="nav-link" data-scroll-target="#参考文档"><span class="header-section-number">5.3</span> 参考文档</a></li>
   </ul>
@@ -267,21 +259,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="发布流程" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="发布流程"><span class="header-section-number">5.1</span> 发布流程</h2>
 <p>我们的目的是使用 <code>docs</code> 文件夹作为静态网页根目录，发布到 <code>lianxhcn.github.io/quarto_book</code>，推荐采用<strong>项目级 Pages</strong>方式，具体如下：</p>
-<section id="步骤一确保-docs-文件夹在主分支" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="步骤一确保-docs-文件夹在主分支"><span class="header-section-number">5.1.1</span> 步骤一：确保 docs 文件夹在主分支</h3>
+<blockquote class="blockquote">
+<p><strong>Step 1</strong>：确保 docs 文件夹在主分支</p>
+</blockquote>
 <ul>
 <li>你已经把所有网页内容渲染到 <code>docs</code>，这是 GitHub Pages 推荐的目录名。</li>
 </ul>
-</section>
-<section id="步骤二推送本地代码到-github" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="步骤二推送本地代码到-github"><span class="header-section-number">5.1.2</span> 步骤二：推送本地代码到 GitHub</h3>
+<blockquote class="blockquote">
+<p><strong>Step 2</strong>：推送本地代码到 GitHub</p>
+</blockquote>
 <ol type="1">
 <li>在 <strong>GitHub Desktop</strong> 中确认你的更改（见第二问）。</li>
 <li>确保主分支（main/master）与 GitHub 仓库同步。</li>
 </ol>
-</section>
-<section id="步骤三在-github-仓库中启用-pages" class="level3" data-number="5.1.3">
-<h3 data-number="5.1.3" class="anchored" data-anchor-id="步骤三在-github-仓库中启用-pages"><span class="header-section-number">5.1.3</span> 步骤三：在 GitHub 仓库中启用 Pages</h3>
+<blockquote class="blockquote">
+<p><strong>Step 3</strong>：在 GitHub 仓库中启用 Pages</p>
+</blockquote>
 <ol type="1">
 <li><p>打开你的项目仓库页面： <a href="https://github.com/lianxhcn/quarto_book">https://github.com/lianxhcn/quarto_book</a></p></li>
 <li><p>点击右上角的 <strong>Settings</strong> → 左侧栏选择 <strong>Pages</strong> 或 <strong>Pages（Beta）</strong></p></li>
@@ -293,21 +286,28 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>保存设置。</p></li>
 </ol>
-</section>
-<section id="步骤四访问网页" class="level3" data-number="5.1.4">
-<h3 data-number="5.1.4" class="anchored" data-anchor-id="步骤四访问网页"><span class="header-section-number">5.1.4</span> 步骤四：访问网页</h3>
+<blockquote class="blockquote">
+<p><strong>Step 4</strong>：访问网页</p>
+</blockquote>
 <ul>
-<li>等待几分钟，GitHub 会自动生成页面。</li>
-<li>访问： <a href="https://lianxhcn.github.io/quarto_book/">https://lianxhcn.github.io/quarto_book/</a></li>
+<li>等待几分钟，GitHub 会自动生成页面： <a href="https://lianxhcn.github.io/quarto_book/">https://lianxhcn.github.io/quarto_book/</a></li>
 </ul>
-</section>
-<section id="注意事项" class="level3" data-number="5.1.5">
-<h3 data-number="5.1.5" class="anchored" data-anchor-id="注意事项"><span class="header-section-number">5.1.5</span> 注意事项</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注意事项
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
 <li>如果页面内容没更新，请确保每次用 <code>quarto render</code> 后及时将最新的 <code>docs</code> 文件夹<strong>推送</strong>到 GitHub。</li>
-<li>你可以通过更改 <code>_quarto.yml</code> 或其他源码，然后再次 render → push → 自动更新网页。</li>
+<li>随后，你可以随时修改本地仓库的内容，编译后推送到 GitHub，GitHub Pages 会自动更新。</li>
 </ul>
-</section>
+</div>
+</div>
 </section>
 <section id="github-desktop-实现-pull-和-push" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="github-desktop-实现-pull-和-push"><span class="header-section-number">5.2</span> GitHub Desktop 实现 Pull 和 Push</h2>
@@ -315,38 +315,40 @@ ul.task-list li input[type="checkbox"] {
 <section id="初始设置仅首次需要" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="初始设置仅首次需要"><span class="header-section-number">5.2.1</span> 初始设置（仅首次需要）</h3>
 <ol type="1">
-<li>打开 GitHub Desktop，File → Add local repository，选择你的本地文件夹。</li>
-<li>仓库面板左上角应看到 <code>quarto_book</code> 项目名，远程仓库自动连接到 <code>https://github.com/lianxhcn/quarto_book</code>。</li>
+<li>确保你已经安装了 <a href="https://desktop.github.com/">GitHub Desktop</a>。</li>
+<li>打开 GitHub Desktop，登录你的 GitHub 账号。</li>
+<li>在 GitHub Desktop 中，点击左上角的 <strong>File</strong> → <strong>Clone repository</strong>。</li>
+<li>在弹出的对话框中，选择 <strong>URL</strong> 选项卡，输入你的仓库地址 <code>https://github.com/lianxhcn/quarto_book</code>，或者在下拉菜单中选择仓库名称。</li>
+<li>选择本地路径（如 <code>D:\Github_lianxh</code>），点击 <strong>Clone</strong>。</li>
 </ol>
 </section>
 <section id="日常操作" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="日常操作"><span class="header-section-number">5.2.2</span> 日常操作</h3>
-<p><strong>Pull（拉取最新远程内容到本地）</strong></p>
-<ol type="1">
-<li>点击 GitHub Desktop 左上角的 “Current Branch”（确保在 main/master 分支）。</li>
-<li>点击右上角的 “Fetch origin”（如果有更新则会变成 “Pull origin”），点击它即可同步远程变更到本地。</li>
-</ol>
 <p><strong>Push（推送本地更新到远程）</strong></p>
 <ol type="1">
 <li>正常编辑、修改、增加或删除文件。</li>
-<li>在 GitHub Desktop 主界面下方看到 “Changes” 列表，输入 Commit message（如 <code>render new chapters</code>），点击 “Commit to main”。</li>
+<li>在 GitHub Desktop 主界面下方看到 “Changes” 列表，输入 Commit message（如 <code>render new chapters</code> 或 <code>update</code>），点击 “Commit to main”。
+<ul>
+<li>注意：如果你修改了 <code>_quarto.yml</code> 文件，确保在提交前运行 <code>quarto render</code> 生成最新的 <code>docs</code> 文件夹。</li>
+<li>如果有新章节或文件，GitHub Desktop 会自动识别并显示在 “Changes” 列表中。</li>
+</ul></li>
 <li>提交后，界面会出现 “Push origin” 按钮，点击即可推送本地更改到 GitHub 仓库。</li>
+</ol>
+<p><strong>Pull（拉取最新远程内容到本地）</strong></p>
+<p>如果你在网页端进行了修改，或者其他人提交了更新，或者想把你的仓库内容同步到你的另一台电脑上，你需要使用「拉取 (Pull)」功能把这些新增内容同步到本地：</p>
+<ol type="1">
+<li>点击 GitHub Desktop 左上角的 “Current Branch”（确保在 main/master 分支）。</li>
+<li>点击右上角的 “Fetch origin”（如果有更新则会变成 “Pull origin”），点击它即可同步远程变更到本地。</li>
 </ol>
 </section>
 <section id="补充说明" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="补充说明"><span class="header-section-number">5.2.3</span> 补充说明</h3>
 <ul>
-<li><strong>新文件/文件夹</strong>：只要在本地新建（如新增章节），在 GitHub Desktop 中会自动识别到“Changes”，按上述流程提交。</li>
-<li><strong>删除或重命名</strong>：同理，所有文件操作 GitHub Desktop 都会追踪。</li>
-<li><strong>冲突</strong>：如遇 pull/push 冲突，按 GitHub Desktop 提示合并冲突后再 push。</li>
-</ul>
-</section>
-<section id="常见问题" class="level3" data-number="5.2.4">
-<h3 data-number="5.2.4" class="anchored" data-anchor-id="常见问题"><span class="header-section-number">5.2.4</span> 常见问题</h3>
-<ul>
-<li><strong>docs 里无变化？</strong> 确认用 <code>quarto render</code> 重新编译，且本地 docs 文件夹变动已被 Git 跟踪和推送。</li>
-<li><strong>访问慢？</strong> GitHub Pages 有时需几分钟才能看到更新。</li>
-<li><strong>访问路径？</strong> 若你以后需要发布为 <code>lianxhcn.github.io</code> 的主站，则结构和设置略有不同，目前发布到 <code>lianxhcn.github.io/quarto_book</code> 是标准做法。</li>
+<li><p><strong>新文件/文件夹</strong>：只要在本地新建（如新增章节），在 GitHub Desktop 中会自动识别到“Changes”，按上述流程提交。</p></li>
+<li><p><strong>删除或重命名</strong>：同理，所有文件操作 GitHub Desktop 都会追踪。</p></li>
+<li><p><strong>冲突</strong>：如遇 pull/push 冲突，按 GitHub Desktop 提示合并冲突后再 push。</p></li>
+<li><p><strong>docs 里无变化？</strong> 确认用 <code>quarto render</code> 重新编译，且本地 docs 文件夹变动已被 Git 跟踪和推送。</p></li>
+<li><p><strong>访问慢？</strong> GitHub Pages 有时需几分钟才能看到更新。</p></li>
 </ul>
 </section>
 </section>
